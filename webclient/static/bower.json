@@ -1,0 +1,11 @@
+{
+    "name": "stickfight_webclient",
+    "version": "0.0.1",
+    "private": "true",
+    "dependencies": {
+        "foundation": "zurb/bower-foundation",
+        "requirejs": "latest",
+        "underscore-amd": "latest",
+        "backbone-amd": "latest"
+  }
+}
