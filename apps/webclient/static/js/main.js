@@ -4,14 +4,15 @@
 
 require.config({
     paths: {
-        "jquery": "libs/jquery/jquery",
+        "jquery": "libs/foundation/js/vendor/jquery",
         "jquery.cookie": "libs/foundation/js/vendor/jquery.cookie",
         "underscore": "libs/underscore/underscore",
         "backbone": "libs/backbone/backbone",
         "backbone.iosync": "libs/backbone.iobind/dist/backbone.iosync",
         "backbone.iobind": "libs/backbone.iobind/dist/backbone.iobind",
         "backbone.tastypie": "libs/backbone.tastypie",
-        "socket.io": "libs/socket.io/lib/socket.io"
+        "socket.io": "libs/socket.io/lib/socket.io",
+        "foundation": "libs/foundation/js/foundation.min"
     },
     shim: {
         "jquery.cookie": {
@@ -36,6 +37,9 @@ require.config({
         },
         "socket.io": {
             exports: "socket"
+        },
+        "foundation": {
+            deps: ["jquery"]
         }
     }
 });
@@ -43,7 +47,8 @@ require([
     // Load our app module and pass it to our definition function.
     // Also pass additional libraries which should be exposed here.
     // Note that libraries passed here will *not* be loaded async!
-    "app"
+    "app",
+    "foundation"
 ], function(application) {
 
     application.initialize();
