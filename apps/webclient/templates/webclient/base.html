@@ -4,6 +4,7 @@
 {% load staticfiles i18n %}
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block pagetitle %}{% endblock %}</title>
 
     {# include css files #}
@@ -12,8 +13,7 @@
 {#          rel="stylesheet" type="text/css"/>#}
 
     {# include javascripts that need to be loaded in head #}
-{#    <script src="{% static "js/libs/foundation/js/vendor/jquery.js" %}"></script>#}
-{#    <script src="{% static "js/libs/foundation/js/vendor/custom.modernizr.js" %}"></script>#}
+    <script src="{% static "js/libs/foundation/js/vendor/custom.modernizr.js" %}"></script>
 
     {% block extrahead %}{% endblock %}
 </head>
@@ -30,8 +30,7 @@
     </div>
 
     <footer id="site-footer">
-
-        {# include javascripts here #}
+        {# include javascripts here if they can not be loaded with require.js #}
 
         {# backbone stuff #}
         <script data-main="{% static "js/main.js" %}" src="{% static "js/libs/requirejs/require.js" %}"></script>
