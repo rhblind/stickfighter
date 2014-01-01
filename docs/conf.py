@@ -278,5 +278,5 @@ intersphinx_mapping = {
     'python': ('http://docs.python.org/', None),
     'django': ('http://django.readthedocs.org/en/latest/', None),
     'tastypie': ('https://django-tastypie.readthedocs.org/en/latest/', None),
-    # 'guardian': ('https://django-guardian.readthedocs.org/en/latest/', None)
+    'guardian': ('https://django-guardian.readthedocs.org/en/latest/', None)
 }

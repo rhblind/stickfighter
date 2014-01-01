@@ -10,7 +10,7 @@ admin.autodiscover()
 urlpatterns = patterns(
     "",
     url(r"^account/admin/", include(admin.site.urls)),
-
+    url(r"^", include("apps.webclient.urls"))
     # Socket.IO urls
-    url("^socket\.io", include(socketio.sdjango.urls)),
+    # url("^socket\.io", include(socketio.sdjango.urls)),
 )

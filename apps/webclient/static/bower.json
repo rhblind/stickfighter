@@ -1,12 +1,13 @@
 {
     "name": "stickfight_webclient",
-    "version": "0.0.1",
+    "version": "1.0",
     "private": "true",
     "dependencies": {
         "foundation": "zurb/bower-foundation",
         "requirejs": "latest",
-        "underscore-amd": "latest",
-        "backbone-amd": "latest",
-        "socket.io": "latest"
+        "socket.io": "latest",
+        "underscore": "latest",
+        "backbone": "latest",
+        "backbone.iobind": "latest"
   }
 }

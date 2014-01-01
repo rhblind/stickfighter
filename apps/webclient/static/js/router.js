@@ -3,7 +3,7 @@
  * */
 
 define([
-    "libs/jquery",
+    "jquery",
     "underscore",
     "backbone"
 ], function($, _, Backbone) {
