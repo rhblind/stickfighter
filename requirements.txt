@@ -1,4 +1,7 @@
-South
-Django
-Sphinx
+django
+django-tastypie
+south
+sphinx
 sphinx-rtd-theme==0.1.5
+
+-e git+git://github.com/abourget/gevent-socketio.git#egg=gevent-socketio

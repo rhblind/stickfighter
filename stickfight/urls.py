@@ -1,12 +1,16 @@
+# -*- coding: utf-8 -*-
+
+import socketio.sdjango
+from django.contrib import admin
 from django.conf.urls import patterns, include, url
 
-from django.contrib import admin
+socketio.sdjango.autodiscover()
 admin.autodiscover()
 
-urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'stickfight.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
+urlpatterns = patterns(
+    "",
+    url(r"^account/admin/", include(admin.site.urls)),
 
-    url(r'^admin/', include(admin.site.urls)),
+    # Socket.IO urls
+    url("^socket\.io", include(socketio.sdjango.urls)),
 )

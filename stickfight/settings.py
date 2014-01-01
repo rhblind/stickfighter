@@ -36,7 +36,10 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'game_engine',
+    'south',
+    'tastypie',
+    'apps.server',
+    'apps.webclient'
 )
 
 MIDDLEWARE_CLASSES = (
