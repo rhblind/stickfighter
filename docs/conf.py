@@ -12,13 +12,17 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
-import sys
 import os
+import sys
+import sphinx_rtd_theme
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-#sys.path.insert(0, os.path.abspath('.'))
+sys.path.insert(0, os.path.abspath('../'))
+
+# Add django to path
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mootadb.settings')
 
 # -- General configuration ------------------------------------------------
 
@@ -73,7 +77,9 @@ release = '1.0'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build']
+exclude_patterns = [
+    '_build'
+]
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
@@ -104,7 +110,7 @@ pygments_style = 'sphinx'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'default'
+html_theme = 'sphinx_rtd_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -112,7 +118,7 @@ html_theme = 'default'
 #html_theme_options = {}
 
 # Add any paths that contain custom themes here, relative to this directory.
-#html_theme_path = []
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -173,6 +179,9 @@ html_static_path = ['_static']
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
 #html_show_copyright = True
 
+# If true, todos are shown in the HTML output. Default is False.
+todo_include_todos = True
+
 # If true, an OpenSearch description file will be output, and all pages will
 # contain a <link> tag referring to it.  The value of this option must be the
 # base URL from which the finished HTML is served.
@@ -188,22 +197,22 @@ htmlhelp_basename = 'Stickfightdoc'
 # -- Options for LaTeX output ---------------------------------------------
 
 latex_elements = {
-# The paper size ('letterpaper' or 'a4paper').
-#'papersize': 'letterpaper',
+    # The paper size ('letterpaper' or 'a4paper').
+    'papersize': 'a4paper',
 
-# The font size ('10pt', '11pt' or '12pt').
-#'pointsize': '10pt',
+    # The font size ('10pt', '11pt' or '12pt').
+    'pointsize': '11pt',
 
-# Additional stuff for the LaTeX preamble.
-#'preamble': '',
+    # Additional stuff for the LaTeX preamble.
+    #'preamble': '',
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'Stickfight.tex', u'Stickfight Documentation',
-   u'Rolf Håvard Blindheim, Stian Larsen', 'manual'),
+    ('index', 'Stickfight.tex', u'Stickfight Documentation',
+     u'Rolf Håvard Blindheim, Stian Larsen', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -246,9 +255,9 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'Stickfight', u'Stickfight Documentation',
-   u'Rolf Håvard Blindheim, Stian Larsen', 'Stickfight', 'One line description of project.',
-   'Miscellaneous'),
+    ('index', 'Stickfight', u'Stickfight Documentation',
+     u'Rolf Håvard Blindheim, Stian Larsen', 'Stickfight', 'One line description of project.',
+     'Miscellaneous'),
 ]
 
 # Documents to append as an appendix to all manuals.
@@ -265,4 +274,9 @@ texinfo_documents = [
 
 
 # Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {'http://docs.python.org/': None}
+intersphinx_mapping = {
+    'python': ('http://docs.python.org/', None),
+    'django': ('http://django.readthedocs.org/en/latest/', None),
+    'tastypie': ('https://django-tastypie.readthedocs.org/en/latest/', None),
+    # 'guardian': ('https://django-guardian.readthedocs.org/en/latest/', None)
+}
