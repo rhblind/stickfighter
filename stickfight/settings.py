@@ -37,12 +37,13 @@ INSTALLED_APPS = (
     "django.contrib.sites",
     "django.contrib.staticfiles",
     # 3rd party apps
-    "south",
-    "tastypie",
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
     "allauth.socialaccount.providers.google",
+    "sitetree",
+    "south",
+    "tastypie",
     # "allauth.socialaccount.providers.openid",
     # "allauth.socialaccount.providers.facebook",
     # local apps
