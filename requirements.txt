@@ -1,6 +1,8 @@
 django
+django-allauth
 django-tastypie
 django-guardian
+redis
 south
 sphinx
 sphinx-rtd-theme==0.1.5
