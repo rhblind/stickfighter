@@ -1,0 +1,14 @@
+
+html, body {
+  background: $body-bg;
+  -webkit-font-smoothing: $font-smoothing;
+
+  header#site-header {
+
+    span#logo-container {
+      content: url(../img/stickfight_logo.png);
+      height: 177px;
+    }
+  }
+
+}

@@ -7703,3 +7703,26 @@ th.hide-for-touch {
 .touch th.show-for-touch {
   display: table-cell !important;
 }
+
+/*
+ * Foundation overrides goes in this file!
+ */
+/* Various global styles */
+/* line 2, ../scss/_base.scss */
+html, body {
+  background: url(../img/backgrounds/linedpaper.png);
+  -webkit-font-smoothing: antialiased;
+}
+/* line 8, ../scss/_base.scss */
+html header#site-header span#logo-container, body header#site-header span#logo-container {
+  content: url(../img/stickfight_logo.png);
+  height: 177px;
+}
+
+/* add a debug css class which
+ * displays a dotted border around the element.
+ */
+/* line 5, ../scss/_debug.scss */
+.debug {
+  border: 1px dotted #800000;
+}
