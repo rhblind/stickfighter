@@ -4,10 +4,8 @@ html, body {
   -webkit-font-smoothing: $font-smoothing;
 
   header#site-header {
-
-    span#logo-container {
-      content: url(../img/stickfight_logo.png);
-      height: 177px;
+    .top-bar {
+      height: rem-calc(80);
     }
   }
 

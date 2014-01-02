@@ -3,7 +3,29 @@
  */
 
 /* Various global styles */
+$primary-color: #222;
+
 $font-smoothing: antialiased;
 $body-bg: url(../img/backgrounds/linedpaper.png);
 $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 
+
+/*
+ * Top bar navigation menu overrides
+ */
+
+$topbar-bg: transparent;
+
+/* Set the link colors and styles for top-level nav */
+$topbar-link-color: $primary-color;
+//$topbar-link-color-hover: $primary-color;
+//$topbar-link-color-active: $primary-color;
+
+
+/* Style the top bar dropdown elements */
+$topbar-dropdown-bg: transparent;
+$topbar-dropdown-link-color: #fff;
+$topbar-dropdown-link-bg: #333;
+$topbar-dropdown-toggle-size: 5px;
+$topbar-dropdown-toggle-color: #fff;
+$topbar-dropdown-toggle-alpha: 0.5;

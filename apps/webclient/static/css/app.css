@@ -1,4 +1,13 @@
 @import url("//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700");
+/*
+ * Foundation overrides goes in this file!
+ */
+/* Various global styles */
+/*
+ * Top bar navigation menu overrides
+ */
+/* Set the link colors and styles for top-level nav */
+/* Style the top bar dropdown elements */
 /* line 287, ../js/libs/foundation/scss/foundation/components/_global.scss */
 meta.foundation-mq-small {
   font-family: "/only screen and (max-width: 40em)/";
@@ -46,7 +55,7 @@ body {
 
 /* line 325, ../js/libs/foundation/scss/foundation/components/_global.scss */
 body {
-  background: white;
+  background: url(../img/backgrounds/linedpaper.png);
   color: #222222;
   padding: 0;
   margin: 0;
@@ -2127,8 +2136,8 @@ select {
   position: relative;
   padding: 0.875rem 1.5rem 0.875rem 0.875rem;
   font-size: 0.8125rem;
-  background-color: #008cba;
-  border-color: #0079a1;
+  background-color: #222222;
+  border-color: #151515;
   color: white;
 }
 /* line 105, ../js/libs/foundation/scss/foundation/components/_alert-boxes.scss */
@@ -2748,7 +2757,7 @@ select {
 .breadcrumbs > * a,
 .breadcrumbs > * span {
   text-transform: uppercase;
-  color: #008cba;
+  color: #222222;
 }
 /* line 71, ../js/libs/foundation/scss/foundation/components/_breadcrumbs.scss */
 .breadcrumbs > *.current {
@@ -2810,8 +2819,8 @@ button, .button {
   padding-left: 2rem;
   font-size: 1rem;
   /*     @else                            { font-size: $padding - rem-calc(2); } */
-  background-color: #008cba;
-  border-color: #0079a1;
+  background-color: #222222;
+  border-color: #151515;
   color: white;
   -webkit-transition: background-color 300ms ease-out;
   -moz-transition: background-color 300ms ease-out;
@@ -2824,7 +2833,7 @@ button, .button {
 }
 /* line 142, ../js/libs/foundation/scss/foundation/components/_buttons.scss */
 button:hover, button:focus, .button:hover, .button:focus {
-  background-color: #0079a1;
+  background-color: #151515;
 }
 /* line 153, ../js/libs/foundation/scss/foundation/components/_buttons.scss */
 button:hover, button:focus, .button:hover, .button:focus {
@@ -2927,8 +2936,8 @@ button.round, .button.round {
 }
 /* line 220, ../js/libs/foundation/scss/foundation/components/_buttons.scss */
 button.disabled, button[disabled], .button.disabled, .button[disabled] {
-  background-color: #008cba;
-  border-color: #0079a1;
+  background-color: #222222;
+  border-color: #151515;
   color: white;
   cursor: default;
   opacity: 0.7;
@@ -2937,7 +2946,7 @@ button.disabled, button[disabled], .button.disabled, .button[disabled] {
 }
 /* line 142, ../js/libs/foundation/scss/foundation/components/_buttons.scss */
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-  background-color: #0079a1;
+  background-color: #151515;
 }
 /* line 153, ../js/libs/foundation/scss/foundation/components/_buttons.scss */
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
@@ -2945,7 +2954,7 @@ button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[dis
 }
 /* line 166, ../js/libs/foundation/scss/foundation/components/_buttons.scss */
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-  background-color: #008cba;
+  background-color: #222222;
 }
 /* line 221, ../js/libs/foundation/scss/foundation/components/_buttons.scss */
 button.disabled.secondary, button[disabled].secondary, .button.disabled.secondary, .button[disabled].secondary {
@@ -4400,7 +4409,7 @@ kbd {
   margin-bottom: inherit;
   padding: 0.25rem 0.5rem 0.375rem;
   font-size: 0.6875rem;
-  background-color: #008cba;
+  background-color: #222222;
   color: white;
 }
 /* line 92, ../js/libs/foundation/scss/foundation/components/_labels.scss */
@@ -4836,14 +4845,14 @@ ul.pagination li.unavailable:hover a, ul.pagination li.unavailable a:focus {
 }
 /* line 60, ../js/libs/foundation/scss/foundation/components/_pagination.scss */
 ul.pagination li.current a {
-  background: #008cba;
+  background: #222222;
   color: white;
   font-weight: bold;
   cursor: default;
 }
 /* line 67, ../js/libs/foundation/scss/foundation/components/_pagination.scss */
 ul.pagination li.current a:hover, ul.pagination li.current a:focus {
-  background: #008cba;
+  background: #222222;
 }
 /* line 119, ../js/libs/foundation/scss/foundation/components/_pagination.scss */
 ul.pagination li {
@@ -4897,10 +4906,10 @@ ul.pagination li {
 .panel.callout {
   border-style: solid;
   border-width: 1px;
-  border-color: #baeeff;
+  border-color: #a2a2a2;
   margin-bottom: 1.25rem;
   padding: 1.25rem;
-  background: #edfbff;
+  background: #bbbbbb;
 }
 /* line 48, ../js/libs/foundation/scss/foundation/components/_panels.scss */
 .panel.callout > :first-child {
@@ -4925,7 +4934,7 @@ ul.pagination li {
 }
 /* line 74, ../js/libs/foundation/scss/foundation/components/_panels.scss */
 .panel.callout a {
-  color: #008cba;
+  color: #222222;
 }
 /* line 79, ../js/libs/foundation/scss/foundation/components/_panels.scss */
 .panel.radius {
@@ -5004,7 +5013,7 @@ ul.pagination li {
 }
 /* line 57, ../js/libs/foundation/scss/foundation/components/_progress-bars.scss */
 .progress .meter {
-  background: #008cba;
+  background: #222222;
   height: 100%;
   display: block;
 }
@@ -5157,7 +5166,7 @@ ul.pagination li {
 /* line 58, ../js/libs/foundation/scss/foundation/components/_side-nav.scss */
 .side-nav li a {
   display: block;
-  color: #008cba;
+  color: #222222;
 }
 /* line 63, ../js/libs/foundation/scss/foundation/components/_side-nav.scss */
 .side-nav li.active > a:first-child {
@@ -5348,7 +5357,7 @@ ul.pagination li {
 .sub-nav dt a:hover,
 .sub-nav dd a:hover,
 .sub-nav li a:hover {
-  color: #0079a1;
+  color: #151515;
 }
 /* line 87, ../js/libs/foundation/scss/foundation/components/_sub-nav.scss */
 .sub-nav dt.active a,
@@ -5357,7 +5366,7 @@ ul.pagination li {
   -webkit-border-radius: 3px;
   border-radius: 3px;
   font-weight: normal;
-  background: #008cba;
+  background: #222222;
   padding: 0.1875rem 1rem;
   cursor: default;
   color: white;
@@ -5366,7 +5375,7 @@ ul.pagination li {
 .sub-nav dt.active a:hover,
 .sub-nav dd.active a:hover,
 .sub-nav li.active a:hover {
-  background: #0079a1;
+  background: #151515;
 }
 
 /* line 287, ../js/libs/foundation/scss/foundation/components/_switch.scss */
@@ -5780,8 +5789,8 @@ table tfoot tr td {
 }
 /* line 49, ../js/libs/foundation/scss/foundation/components/_thumbs.scss */
 .th:hover, .th:focus {
-  -webkit-box-shadow: 0 0 6px 1px rgba(0, 140, 186, 0.5);
-  box-shadow: 0 0 6px 1px rgba(0, 140, 186, 0.5);
+  -webkit-box-shadow: 0 0 6px 1px rgba(34, 34, 34, 0.5);
+  box-shadow: 0 0 6px 1px rgba(34, 34, 34, 0.5);
 }
 /* line 66, ../js/libs/foundation/scss/foundation/components/_thumbs.scss */
 .th.radius {
@@ -5805,8 +5814,8 @@ a.th {
 }
 /* line 39, ../js/libs/foundation/scss/foundation/components/_tooltips.scss */
 .has-tip:hover, .has-tip:focus {
-  border-bottom: dotted 1px #003f54;
-  color: #008cba;
+  border-bottom: dotted 1px black;
+  color: #222222;
 }
 /* line 45, ../js/libs/foundation/scss/foundation/components/_tooltips.scss */
 .has-tip.tip-left, .has-tip.tip-right {
@@ -5843,8 +5852,8 @@ a.th {
 }
 /* line 74, ../js/libs/foundation/scss/foundation/components/_tooltips.scss */
 .tooltip.opened {
-  color: #008cba !important;
-  border-bottom: dotted 1px #003f54 !important;
+  color: #222222 !important;
+  border-bottom: dotted 1px black !important;
 }
 
 /* line 80, ../js/libs/foundation/scss/foundation/components/_tooltips.scss */
@@ -5932,13 +5941,13 @@ td {
 /* Default Link Styles */
 /* line 152, ../js/libs/foundation/scss/foundation/components/_type.scss */
 a {
-  color: #008cba;
+  color: #222222;
   text-decoration: none;
   line-height: inherit;
 }
 /* line 158, ../js/libs/foundation/scss/foundation/components/_type.scss */
 a:hover, a:focus {
-  color: #0079a1;
+  color: #151515;
 }
 /* line 160, ../js/libs/foundation/scss/foundation/components/_type.scss */
 a img {
@@ -6352,7 +6361,7 @@ meta.foundation-mq-topbar {
 /* line 86, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
 .contain-to-grid {
   width: 100%;
-  background: #333333;
+  background: transparent;
 }
 /* line 90, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
 .contain-to-grid .top-bar {
@@ -6392,7 +6401,7 @@ meta.foundation-mq-topbar {
   height: 45px;
   line-height: 45px;
   position: relative;
-  background: #333333;
+  background: transparent;
   margin-bottom: 0;
 }
 /* line 129, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
@@ -6443,7 +6452,7 @@ meta.foundation-mq-topbar {
 /* line 166, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar .name h1 a {
   font-weight: normal;
-  color: white;
+  color: #222222;
   width: 50%;
   display: block;
   padding: 0 15px;
@@ -6456,7 +6465,7 @@ meta.foundation-mq-topbar {
 }
 /* line 182, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar .toggle-topbar a {
-  color: white;
+  color: #222222;
   text-transform: uppercase;
   font-size: 0.8125rem;
   font-weight: bold;
@@ -6499,7 +6508,7 @@ meta.foundation-mq-topbar {
 }
 /* line 234, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar.expanded .title-area {
-  background: #333333;
+  background: transparent;
 }
 /* line 237, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar.expanded .toggle-topbar a {
@@ -6525,7 +6534,7 @@ meta.foundation-mq-topbar {
   width: 100%;
   height: auto;
   display: block;
-  background: #333333;
+  background: transparent;
   font-size: 16px;
   margin: 0;
 }
@@ -6541,24 +6550,24 @@ meta.foundation-mq-topbar {
 .top-bar-section ul li > a {
   display: block;
   width: 100%;
-  color: white;
+  color: #222222;
   padding: 12px 0 12px 0;
   padding-left: 15px;
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 0.8125rem;
   font-weight: normal;
-  background: #333333;
+  background: transparent;
 }
 /* line 293, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li > a.button {
-  background: #008cba;
+  background: #222222;
   font-size: 0.8125rem;
   padding-right: 15px;
   padding-left: 15px;
 }
 /* line 298, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li > a.button:hover {
-  background: #006687;
+  background: #090909;
 }
 /* line 302, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li > a.button.secondary {
@@ -6591,12 +6600,12 @@ meta.foundation-mq-topbar {
 }
 /* line 331, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li.active > a {
-  background: #008cba;
+  background: #222222;
   color: white;
 }
 /* line 334, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li.active > a:hover {
-  background: #0079a1;
+  background: #151515;
 }
 /* line 341, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section .has-form {
@@ -6613,7 +6622,7 @@ meta.foundation-mq-topbar {
   width: 0;
   height: 0;
   border: inset 5px;
-  border-color: transparent transparent transparent rgba(255, 255, 255, 0.4);
+  border-color: transparent transparent transparent rgba(255, 255, 255, 0.5);
   border-left-style: solid;
   margin-right: 15px;
   margin-top: -4.5px;
@@ -6657,7 +6666,7 @@ meta.foundation-mq-topbar {
 }
 /* line 388, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section .dropdown li.title h5 a {
-  color: white;
+  color: #222222;
   line-height: 22.5px;
   display: block;
 }
@@ -6679,7 +6688,7 @@ meta.foundation-mq-topbar {
 @media only screen and (min-width: 40.063em) {
   /* line 412, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
   .top-bar {
-    background: #333333;
+    background: transparent;
     *zoom: 1;
     overflow: visible;
   }
@@ -6713,7 +6722,7 @@ meta.foundation-mq-topbar {
   }
   /* line 429, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
   .top-bar.expanded {
-    background: #333333;
+    background: transparent;
   }
 
   /* line 432, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
@@ -6753,7 +6762,7 @@ meta.foundation-mq-topbar {
   .top-bar-section li a:not(.button) {
     padding: 0 15px;
     line-height: 45px;
-    background: #333333;
+    background: transparent;
   }
   /* line 464, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
   .top-bar-section li a:not(.button):hover {
@@ -6770,7 +6779,7 @@ meta.foundation-mq-topbar {
     width: 0;
     height: 0;
     border: inset 5px;
-    border-color: rgba(255, 255, 255, 0.4) transparent transparent transparent;
+    border-color: rgba(255, 255, 255, 0.5) transparent transparent transparent;
     border-top-style: solid;
     margin-top: -2.5px;
     top: 22.5px;
@@ -6831,7 +6840,7 @@ meta.foundation-mq-topbar {
   }
   /* line 545, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
   .top-bar-section .has-form {
-    background: #333333;
+    background: transparent;
     padding: 0 15px;
     height: 45px;
   }
@@ -6852,7 +6861,7 @@ meta.foundation-mq-topbar {
   }
   /* line 573, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
   .no-js .top-bar-section ul li:active > a {
-    background: #008cba;
+    background: #222222;
     color: white;
   }
   /* line 581, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
@@ -7704,19 +7713,14 @@ th.hide-for-touch {
   display: table-cell !important;
 }
 
-/*
- * Foundation overrides goes in this file!
- */
-/* Various global styles */
 /* line 2, ../scss/_base.scss */
 html, body {
   background: url(../img/backgrounds/linedpaper.png);
   -webkit-font-smoothing: antialiased;
 }
-/* line 8, ../scss/_base.scss */
-html header#site-header span#logo-container, body header#site-header span#logo-container {
-  content: url(../img/stickfight_logo.png);
-  height: 177px;
+/* line 7, ../scss/_base.scss */
+html header#site-header .top-bar, body header#site-header .top-bar {
+  height: 5rem;
 }
 
 /* add a debug css class which
