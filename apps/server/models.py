@@ -119,6 +119,7 @@ class Effect(models.Model):
     ABILITIES = (
         ("attack", _("Attack")),
         ("block", _("Block")),
+        ("chain", _("Play another card")),
         ("discard", _("Discard")),
         ("draw", _("Draw")),
         ("gain_turn", _("Gain turn")),
