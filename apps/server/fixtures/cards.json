@@ -1,0 +1,446 @@
+[
+{
+  "pk": 1, 
+  "model": "server.card", 
+  "fields": {
+    "name": "Jab", 
+    "created": "2014-01-06T19:16:57.389Z", 
+    "modified": "2014-01-06T19:26:21.257Z", 
+    "effects": [
+      1, 
+      2
+    ], 
+    "type": "basic_attack", 
+    "description": "Few blocks, little damage, more attacks"
+  }
+},
+{
+  "pk": 2, 
+  "model": "server.card", 
+  "fields": {
+    "name": "Uppercut", 
+    "created": "2014-01-06T19:28:34.297Z", 
+    "modified": "2014-01-06T19:28:34.298Z", 
+    "effects": [
+      3, 
+      5, 
+      2
+    ], 
+    "type": "basic_attack", 
+    "description": "average overall, more attacks"
+  }
+},
+{
+  "pk": 3, 
+  "model": "server.card", 
+  "fields": {
+    "name": "Straight", 
+    "created": "2014-01-06T19:29:49.321Z", 
+    "modified": "2014-01-06T19:29:49.321Z", 
+    "effects": [
+      5, 
+      6
+    ], 
+    "type": "basic_attack", 
+    "description": "High damage"
+  }
+},
+{
+  "pk": 4, 
+  "model": "server.card", 
+  "fields": {
+    "name": "Hook", 
+    "created": "2014-01-06T19:31:27.250Z", 
+    "modified": "2014-01-06T19:31:27.250Z", 
+    "effects": [
+      3, 
+      2
+    ], 
+    "type": "basic_attack", 
+    "description": "Fewer blocks than uppercut, more attacks"
+  }
+},
+{
+  "pk": 5, 
+  "model": "server.card", 
+  "fields": {
+    "name": "Kick", 
+    "created": "2014-01-06T19:34:13.914Z", 
+    "modified": "2014-01-06T19:34:13.914Z", 
+    "effects": [
+      7, 
+      9
+    ], 
+    "type": "basic_attack", 
+    "description": "High potential damage, fewer blocks than straight"
+  }
+},
+{
+  "pk": 6, 
+  "model": "server.card", 
+  "fields": {
+    "name": "Elbow", 
+    "created": "2014-01-06T19:34:50.003Z", 
+    "modified": "2014-01-06T19:34:50.003Z", 
+    "effects": [
+      5, 
+      7
+    ], 
+    "type": "basic_attack", 
+    "description": "Few blockers, pretty safe damage"
+  }
+},
+{
+  "pk": 7, 
+  "model": "server.card", 
+  "fields": {
+    "name": "Block", 
+    "created": "2014-01-06T19:39:29.345Z", 
+    "modified": "2014-01-06T19:39:29.345Z", 
+    "effects": [
+      10
+    ], 
+    "type": "defensive", 
+    "description": "Blocks 4, the ones with the lowest potential damage"
+  }
+},
+{
+  "pk": 8, 
+  "model": "server.card", 
+  "fields": {
+    "name": "Dogde", 
+    "created": "2014-01-06T19:40:37.073Z", 
+    "modified": "2014-01-06T19:40:37.073Z", 
+    "effects": [
+      11
+    ], 
+    "type": "defensive", 
+    "description": "Blocks 3, average"
+  }
+},
+{
+  "pk": 9, 
+  "model": "server.card", 
+  "fields": {
+    "name": "Duck", 
+    "created": "2014-01-06T19:41:49.014Z", 
+    "modified": "2014-01-06T19:41:49.014Z", 
+    "effects": [
+      12
+    ], 
+    "type": "defensive", 
+    "description": "Blocks 2, the ones with the highest potential damage"
+  }
+},
+{
+  "pk": 10, 
+  "model": "server.card", 
+  "fields": {
+    "name": "Grab", 
+    "created": "2014-01-06T19:42:22.568Z", 
+    "modified": "2014-01-06T19:43:48.589Z", 
+    "effects": [
+      14, 
+      12
+    ], 
+    "type": "defensive", 
+    "description": "Blocks 2, gives the blocker a offensive capability off turn"
+  }
+},
+{
+  "pk": 1, 
+  "model": "server.deckcardquantity", 
+  "fields": {
+    "card": 1, 
+    "quantity": 11
+  }
+},
+{
+  "pk": 2, 
+  "model": "server.deckcardquantity", 
+  "fields": {
+    "card": 2, 
+    "quantity": 10
+  }
+},
+{
+  "pk": 3, 
+  "model": "server.deckcardquantity", 
+  "fields": {
+    "card": 3, 
+    "quantity": 8
+  }
+},
+{
+  "pk": 4, 
+  "model": "server.deckcardquantity", 
+  "fields": {
+    "card": 4, 
+    "quantity": 10
+  }
+},
+{
+  "pk": 5, 
+  "model": "server.deckcardquantity", 
+  "fields": {
+    "card": 5, 
+    "quantity": 12
+  }
+},
+{
+  "pk": 6, 
+  "model": "server.deckcardquantity", 
+  "fields": {
+    "card": 6, 
+    "quantity": 9
+  }
+},
+{
+  "pk": 1, 
+  "model": "server.deck", 
+  "fields": {
+    "cards": [
+      1, 
+      2, 
+      3, 
+      4, 
+      5, 
+      6
+    ], 
+    "created": "2014-01-06T19:36:20.355Z", 
+    "name": "Default deck", 
+    "modified": "2014-01-06T19:36:20.355Z", 
+    "description": "The default deck"
+  }
+},
+{
+  "pk": 1, 
+  "model": "server.effect", 
+  "fields": {
+    "default_max": true, 
+    "ability": "attack", 
+    "created": "2014-01-06T19:16:53.633Z", 
+    "min_modifier": 0, 
+    "max_modifier": 1, 
+    "modified": "2014-01-06T19:16:53.633Z", 
+    "priority": 50, 
+    "cost": [], 
+    "resolves": "damage.main", 
+    "description": ""
+  }
+},
+{
+  "pk": 2, 
+  "model": "server.effect", 
+  "fields": {
+    "default_max": true, 
+    "ability": "chain", 
+    "created": "2014-01-06T19:26:15.703Z", 
+    "min_modifier": 0, 
+    "max_modifier": 1, 
+    "modified": "2014-01-06T19:26:15.703Z", 
+    "priority": 50, 
+    "cost": [], 
+    "resolves": "damage.main", 
+    "description": ""
+  }
+},
+{
+  "pk": 3, 
+  "model": "server.effect", 
+  "fields": {
+    "default_max": true, 
+    "ability": "attack", 
+    "created": "2014-01-06T19:27:16.806Z", 
+    "min_modifier": 0, 
+    "max_modifier": 3, 
+    "modified": "2014-01-06T19:27:16.806Z", 
+    "priority": 50, 
+    "cost": [], 
+    "resolves": "damage.main", 
+    "description": ""
+  }
+},
+{
+  "pk": 4, 
+  "model": "server.effect", 
+  "fields": {
+    "default_max": false, 
+    "ability": "throw", 
+    "created": "2014-01-06T19:28:17.111Z", 
+    "min_modifier": 0, 
+    "max_modifier": 1, 
+    "modified": "2014-01-06T19:28:17.111Z", 
+    "priority": 50, 
+    "cost": [], 
+    "resolves": "damage.main", 
+    "description": ""
+  }
+},
+{
+  "pk": 5, 
+  "model": "server.effect", 
+  "fields": {
+    "default_max": false, 
+    "ability": "attack", 
+    "created": "2014-01-06T19:28:23.274Z", 
+    "min_modifier": 0, 
+    "max_modifier": 1, 
+    "modified": "2014-01-06T19:28:23.274Z", 
+    "priority": 50, 
+    "cost": [
+      4
+    ], 
+    "resolves": "damage.main", 
+    "description": ""
+  }
+},
+{
+  "pk": 6, 
+  "model": "server.effect", 
+  "fields": {
+    "default_max": true, 
+    "ability": "attack", 
+    "created": "2014-01-06T19:29:27.078Z", 
+    "min_modifier": 0, 
+    "max_modifier": 5, 
+    "modified": "2014-01-06T19:29:27.078Z", 
+    "priority": 50, 
+    "cost": [], 
+    "resolves": "damage.main", 
+    "description": ""
+  }
+},
+{
+  "pk": 7, 
+  "model": "server.effect", 
+  "fields": {
+    "default_max": true, 
+    "ability": "attack", 
+    "created": "2014-01-06T19:32:57.295Z", 
+    "min_modifier": 0, 
+    "max_modifier": 2, 
+    "modified": "2014-01-06T19:32:57.295Z", 
+    "priority": 50, 
+    "cost": [], 
+    "resolves": "damage.main", 
+    "description": ""
+  }
+},
+{
+  "pk": 8, 
+  "model": "server.effect", 
+  "fields": {
+    "default_max": false, 
+    "ability": "throw", 
+    "created": "2014-01-06T19:34:00.813Z", 
+    "min_modifier": 0, 
+    "max_modifier": 5, 
+    "modified": "2014-01-06T19:34:00.813Z", 
+    "priority": 50, 
+    "cost": [], 
+    "resolves": "damage.main", 
+    "description": ""
+  }
+},
+{
+  "pk": 9, 
+  "model": "server.effect", 
+  "fields": {
+    "default_max": false, 
+    "ability": "attack", 
+    "created": "2014-01-06T19:34:02.395Z", 
+    "min_modifier": 0, 
+    "max_modifier": 5, 
+    "modified": "2014-01-06T19:34:02.395Z", 
+    "priority": 50, 
+    "cost": [
+      8
+    ], 
+    "resolves": "damage.main", 
+    "description": ""
+  }
+},
+{
+  "pk": 10, 
+  "model": "server.effect", 
+  "fields": {
+    "default_max": true, 
+    "ability": "block", 
+    "created": "2014-01-06T19:39:26.100Z", 
+    "min_modifier": 0, 
+    "max_modifier": 4, 
+    "modified": "2014-01-06T19:40:50.739Z", 
+    "priority": 50, 
+    "cost": [], 
+    "resolves": "block.main", 
+    "description": ""
+  }
+},
+{
+  "pk": 11, 
+  "model": "server.effect", 
+  "fields": {
+    "default_max": true, 
+    "ability": "block", 
+    "created": "2014-01-06T19:40:24.452Z", 
+    "min_modifier": 0, 
+    "max_modifier": 3, 
+    "modified": "2014-01-06T19:40:24.452Z", 
+    "priority": 50, 
+    "cost": [], 
+    "resolves": "block.main", 
+    "description": ""
+  }
+},
+{
+  "pk": 12, 
+  "model": "server.effect", 
+  "fields": {
+    "default_max": true, 
+    "ability": "block", 
+    "created": "2014-01-06T19:41:47.404Z", 
+    "min_modifier": 0, 
+    "max_modifier": 2, 
+    "modified": "2014-01-06T19:41:47.404Z", 
+    "priority": 50, 
+    "cost": [], 
+    "resolves": "block.main", 
+    "description": ""
+  }
+},
+{
+  "pk": 13, 
+  "model": "server.effect", 
+  "fields": {
+    "default_max": false, 
+    "ability": "throw", 
+    "created": "2014-01-06T19:43:41.076Z", 
+    "min_modifier": 0, 
+    "max_modifier": 2, 
+    "modified": "2014-01-06T19:43:41.076Z", 
+    "priority": 50, 
+    "cost": [], 
+    "resolves": "block.end", 
+    "description": ""
+  }
+},
+{
+  "pk": 14, 
+  "model": "server.effect", 
+  "fields": {
+    "default_max": false, 
+    "ability": "attack", 
+    "created": "2014-01-06T19:43:43.332Z", 
+    "min_modifier": 0, 
+    "max_modifier": 2, 
+    "modified": "2014-01-06T19:43:43.332Z", 
+    "priority": 50, 
+    "cost": [
+      13
+    ], 
+    "resolves": "block.end", 
+    "description": ""
+  }
+}
+]
