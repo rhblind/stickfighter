@@ -7,7 +7,7 @@ admin.autodiscover()
 
 urlpatterns = patterns(
     "",
-    url(r"^accounts", include("allauth.urls")),
+    url(r"^accounts/", include("allauth.urls")),
     url(r"^accounts/admin/", include(admin.site.urls)),
 
     # Include apps here

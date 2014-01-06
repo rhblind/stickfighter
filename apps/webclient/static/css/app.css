@@ -6361,7 +6361,7 @@ meta.foundation-mq-topbar {
 /* line 86, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
 .contain-to-grid {
   width: 100%;
-  background: transparent;
+  background: #333333;
 }
 /* line 90, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
 .contain-to-grid .top-bar {
@@ -6401,7 +6401,7 @@ meta.foundation-mq-topbar {
   height: 45px;
   line-height: 45px;
   position: relative;
-  background: transparent;
+  background: #333333;
   margin-bottom: 0;
 }
 /* line 129, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
@@ -6452,7 +6452,7 @@ meta.foundation-mq-topbar {
 /* line 166, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar .name h1 a {
   font-weight: normal;
-  color: #222222;
+  color: white;
   width: 50%;
   display: block;
   padding: 0 15px;
@@ -6465,7 +6465,7 @@ meta.foundation-mq-topbar {
 }
 /* line 182, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar .toggle-topbar a {
-  color: #222222;
+  color: white;
   text-transform: uppercase;
   font-size: 0.8125rem;
   font-weight: bold;
@@ -6498,8 +6498,8 @@ meta.foundation-mq-topbar {
   display: block;
   width: 16px;
   height: 0;
-  -webkit-box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white;
-  box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white;
+  -webkit-box-shadow: 0 10px 0 1px #222222, 0 16px 0 1px #222222, 0 22px 0 1px #222222;
+  box-shadow: 0 10px 0 1px #222222, 0 16px 0 1px #222222, 0 22px 0 1px #222222;
 }
 /* line 230, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar.expanded {
@@ -6508,7 +6508,7 @@ meta.foundation-mq-topbar {
 }
 /* line 234, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar.expanded .title-area {
-  background: transparent;
+  background: #333333;
 }
 /* line 237, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar.expanded .toggle-topbar a {
@@ -6534,7 +6534,7 @@ meta.foundation-mq-topbar {
   width: 100%;
   height: auto;
   display: block;
-  background: transparent;
+  background: #333333;
   font-size: 16px;
   margin: 0;
 }
@@ -6550,13 +6550,13 @@ meta.foundation-mq-topbar {
 .top-bar-section ul li > a {
   display: block;
   width: 100%;
-  color: #222222;
+  color: white;
   padding: 12px 0 12px 0;
   padding-left: 15px;
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 0.8125rem;
   font-weight: normal;
-  background: transparent;
+  background: #333333;
 }
 /* line 293, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li > a.button {
@@ -6622,7 +6622,7 @@ meta.foundation-mq-topbar {
   width: 0;
   height: 0;
   border: inset 5px;
-  border-color: transparent transparent transparent rgba(255, 255, 255, 0.5);
+  border-color: transparent transparent transparent rgba(255, 255, 255, 0.4);
   border-left-style: solid;
   margin-right: 15px;
   margin-top: -4.5px;
@@ -6666,7 +6666,7 @@ meta.foundation-mq-topbar {
 }
 /* line 388, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section .dropdown li.title h5 a {
-  color: #222222;
+  color: white;
   line-height: 22.5px;
   display: block;
 }
@@ -6688,7 +6688,7 @@ meta.foundation-mq-topbar {
 @media only screen and (min-width: 40.063em) {
   /* line 412, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
   .top-bar {
-    background: transparent;
+    background: #333333;
     *zoom: 1;
     overflow: visible;
   }
@@ -6722,7 +6722,7 @@ meta.foundation-mq-topbar {
   }
   /* line 429, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
   .top-bar.expanded {
-    background: transparent;
+    background: #333333;
   }
 
   /* line 432, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
@@ -6762,7 +6762,7 @@ meta.foundation-mq-topbar {
   .top-bar-section li a:not(.button) {
     padding: 0 15px;
     line-height: 45px;
-    background: transparent;
+    background: #333333;
   }
   /* line 464, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
   .top-bar-section li a:not(.button):hover {
@@ -6779,7 +6779,7 @@ meta.foundation-mq-topbar {
     width: 0;
     height: 0;
     border: inset 5px;
-    border-color: rgba(255, 255, 255, 0.5) transparent transparent transparent;
+    border-color: rgba(255, 255, 255, 0.4) transparent transparent transparent;
     border-top-style: solid;
     margin-top: -2.5px;
     top: 22.5px;
@@ -6840,7 +6840,7 @@ meta.foundation-mq-topbar {
   }
   /* line 545, ../js/libs/foundation/scss/foundation/components/_top-bar.scss */
   .top-bar-section .has-form {
-    background: transparent;
+    background: #333333;
     padding: 0 15px;
     height: 45px;
   }
@@ -7718,9 +7718,9 @@ html, body {
   background: url(../img/backgrounds/linedpaper.png);
   -webkit-font-smoothing: antialiased;
 }
-/* line 7, ../scss/_base.scss */
-html header#site-header .top-bar, body header#site-header .top-bar {
-  height: 5rem;
+/* line 15, ../scss/_base.scss */
+html div#wrapper, body div#wrapper {
+  margin-top: 2.5rem;
 }
 
 /* add a debug css class which

@@ -4,9 +4,16 @@ html, body {
   -webkit-font-smoothing: $font-smoothing;
 
   header#site-header {
-    .top-bar {
-      height: rem-calc(80);
-    }
+
+//    .top-bar {
+//      a:not(.button) {
+//        line-height: 45px;
+//      }
+//    }
+  }
+
+  div#wrapper {
+    margin-top: rem-calc(40);
   }
 
 }

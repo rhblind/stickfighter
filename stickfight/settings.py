@@ -84,6 +84,8 @@ ROOT_URLCONF = "stickfight.urls"
 
 WSGI_APPLICATION = "stickfight.wsgi.application"
 
+LOGIN_REDIRECT_URL = "/"
+SOCIALACCOUNT_QUERY_EMAIL = True
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
@@ -113,6 +115,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = "/static/"
-
-
-
