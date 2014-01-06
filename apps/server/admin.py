@@ -1,14 +1,42 @@
 # -*- coding: utf-8 -*-
 
+from django import forms
 from django.contrib import admin
 from django.db.models import Sum
 from .models import Card, DeckCardQuantity, Deck, Effect
 
 
+#
+# Custom Admin model forms
+#
+
+class CardAdminModelForm(forms.ModelForm):
+    """
+    Override the queryset for the `can_block` relation
+    depending if the card in question is an offensive card
+    or not. If it's an offensive card, it mean it can't block
+    and we set the queryset to empty.
+    """
+
+    class Meta:
+        model = Card
+
+    def __init__(self, *args, **kwargs):
+        super(CardAdminModelForm, self).__init__(*args, **kwargs)
+        if self.instance.type == "offensive":
+            self.fields["can_block"].queryset = Card.objects.none()
+
+
+#
+# Model Admins
+#
+
 class CardAdmin(admin.ModelAdmin):
+    form = CardAdminModelForm
     list_display = ("name", "description", "type")
     list_filter = ("type",)
-    filter_horizontal = ("effects",)
+    filter_horizontal = ("effects", "can_block")
+    ordering = ("name", "type")
 
 
 class DeckCardQuantityAdmin(admin.ModelAdmin):

@@ -51,7 +51,6 @@ class Card(models.Model):
     """
 
     CARD_TYPE = (
-        ("basic_attack", _("Basic attack")),
         ("offensive", _("Offensive")),
         ("defensive", _("Defensive"))
     )
@@ -60,12 +59,14 @@ class Card(models.Model):
     description = models.CharField(max_length=255, blank=True, null=True)
     type = models.CharField(max_length=30, choices=CARD_TYPE)
     effects = models.ManyToManyField("server.Effect", help_text=_("Stack of effects which makes up the card."))
+    can_block = models.ManyToManyField("self", symmetrical=False, blank=True, null=True,
+                                       limit_choices_to={"type": "offensive"})
 
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
 
     class Meta:
-        pass
+        ordering = ("name", "type")
 
     def __unicode__(self):
         return self.name
@@ -119,10 +120,11 @@ class Effect(models.Model):
     ABILITIES = (
         ("attack", _("Attack")),
         ("block", _("Block")),
-        ("chain", _("Play another card")),
+        ("chain", _("Chain another card")),
         ("discard", _("Discard")),
         ("draw", _("Draw")),
         ("gain_turn", _("Gain turn")),
+        ("increase", _("Increase")),
         ("loose_turn", _("Loose turn")),
         ("reveal", _("Reveal hand")),
         ("throw", _("Throw")),
@@ -172,4 +174,4 @@ class Effect(models.Model):
 # Create an API key per user
 #
 
-# models.signals.post_save.connect(create_api_key, sender=User)
+models.signals.post_save.connect(create_api_key, sender=User)
