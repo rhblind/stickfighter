@@ -3,6 +3,7 @@ django-allauth
 django-tastypie
 django-guardian
 django-sitetree
+gunicorn
 redis
 south
 sphinx
