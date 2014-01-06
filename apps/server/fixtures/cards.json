@@ -3,14 +3,15 @@
   "pk": 1, 
   "model": "server.card", 
   "fields": {
+    "can_block": [], 
     "name": "Jab", 
     "created": "2014-01-06T19:16:57.389Z", 
-    "modified": "2014-01-06T19:26:21.257Z", 
+    "modified": "2014-01-06T21:23:10.269Z", 
     "effects": [
       1, 
       2
     ], 
-    "type": "basic_attack", 
+    "type": "offensive", 
     "description": "Few blocks, little damage, more attacks"
   }
 },
@@ -18,15 +19,16 @@
   "pk": 2, 
   "model": "server.card", 
   "fields": {
+    "can_block": [], 
     "name": "Uppercut", 
     "created": "2014-01-06T19:28:34.297Z", 
-    "modified": "2014-01-06T19:28:34.298Z", 
+    "modified": "2014-01-06T21:23:31.174Z", 
     "effects": [
       3, 
-      5, 
-      2
+      2, 
+      5
     ], 
-    "type": "basic_attack", 
+    "type": "offensive", 
     "description": "average overall, more attacks"
   }
 },
@@ -34,14 +36,15 @@
   "pk": 3, 
   "model": "server.card", 
   "fields": {
+    "can_block": [], 
     "name": "Straight", 
     "created": "2014-01-06T19:29:49.321Z", 
-    "modified": "2014-01-06T19:29:49.321Z", 
+    "modified": "2014-01-06T21:23:25.803Z", 
     "effects": [
-      5, 
-      6
+      6, 
+      5
     ], 
-    "type": "basic_attack", 
+    "type": "offensive", 
     "description": "High damage"
   }
 },
@@ -49,14 +52,15 @@
   "pk": 4, 
   "model": "server.card", 
   "fields": {
+    "can_block": [], 
     "name": "Hook", 
     "created": "2014-01-06T19:31:27.250Z", 
-    "modified": "2014-01-06T19:31:27.250Z", 
+    "modified": "2014-01-06T21:23:02.647Z", 
     "effects": [
       3, 
       2
     ], 
-    "type": "basic_attack", 
+    "type": "offensive", 
     "description": "Fewer blocks than uppercut, more attacks"
   }
 },
@@ -64,14 +68,15 @@
   "pk": 5, 
   "model": "server.card", 
   "fields": {
+    "can_block": [], 
     "name": "Kick", 
     "created": "2014-01-06T19:34:13.914Z", 
-    "modified": "2014-01-06T19:34:13.914Z", 
+    "modified": "2014-01-06T21:23:17.762Z", 
     "effects": [
       7, 
       9
     ], 
-    "type": "basic_attack", 
+    "type": "offensive", 
     "description": "High potential damage, fewer blocks than straight"
   }
 },
@@ -79,14 +84,15 @@
   "pk": 6, 
   "model": "server.card", 
   "fields": {
+    "can_block": [], 
     "name": "Elbow", 
     "created": "2014-01-06T19:34:50.003Z", 
-    "modified": "2014-01-06T19:34:50.003Z", 
+    "modified": "2014-01-06T21:22:37.782Z", 
     "effects": [
-      5, 
-      7
+      7, 
+      5
     ], 
-    "type": "basic_attack", 
+    "type": "offensive", 
     "description": "Few blockers, pretty safe damage"
   }
 },
@@ -94,9 +100,10 @@
   "pk": 7, 
   "model": "server.card", 
   "fields": {
+    "can_block": [], 
     "name": "Block", 
     "created": "2014-01-06T19:39:29.345Z", 
-    "modified": "2014-01-06T19:39:29.345Z", 
+    "modified": "2014-01-06T21:21:27.497Z", 
     "effects": [
       10
     ], 
@@ -108,9 +115,10 @@
   "pk": 8, 
   "model": "server.card", 
   "fields": {
+    "can_block": [], 
     "name": "Dogde", 
     "created": "2014-01-06T19:40:37.073Z", 
-    "modified": "2014-01-06T19:40:37.073Z", 
+    "modified": "2014-01-06T21:21:34.101Z", 
     "effects": [
       11
     ], 
@@ -122,9 +130,10 @@
   "pk": 9, 
   "model": "server.card", 
   "fields": {
+    "can_block": [], 
     "name": "Duck", 
     "created": "2014-01-06T19:41:49.014Z", 
-    "modified": "2014-01-06T19:41:49.014Z", 
+    "modified": "2014-01-06T21:21:41.239Z", 
     "effects": [
       12
     ], 
@@ -136,12 +145,13 @@
   "pk": 10, 
   "model": "server.card", 
   "fields": {
+    "can_block": [], 
     "name": "Grab", 
     "created": "2014-01-06T19:42:22.568Z", 
-    "modified": "2014-01-06T19:43:48.589Z", 
+    "modified": "2014-01-06T21:22:25.118Z", 
     "effects": [
-      14, 
-      12
+      12, 
+      14
     ], 
     "type": "defensive", 
     "description": "Blocks 2, gives the blocker a offensive capability off turn"
@@ -282,11 +292,11 @@
   "model": "server.effect", 
   "fields": {
     "default_max": false, 
-    "ability": "attack", 
+    "ability": "increase", 
     "created": "2014-01-06T19:28:23.274Z", 
     "min_modifier": 0, 
     "max_modifier": 1, 
-    "modified": "2014-01-06T19:28:23.274Z", 
+    "modified": "2014-01-06T21:47:30.452Z", 
     "priority": 50, 
     "cost": [
       4
@@ -348,11 +358,11 @@
   "model": "server.effect", 
   "fields": {
     "default_max": false, 
-    "ability": "attack", 
+    "ability": "increase", 
     "created": "2014-01-06T19:34:02.395Z", 
     "min_modifier": 0, 
     "max_modifier": 5, 
-    "modified": "2014-01-06T19:34:02.395Z", 
+    "modified": "2014-01-06T21:48:58.839Z", 
     "priority": 50, 
     "cost": [
       8
@@ -430,11 +440,11 @@
   "model": "server.effect", 
   "fields": {
     "default_max": false, 
-    "ability": "attack", 
+    "ability": "increase", 
     "created": "2014-01-06T19:43:43.332Z", 
     "min_modifier": 0, 
     "max_modifier": 2, 
-    "modified": "2014-01-06T19:43:43.332Z", 
+    "modified": "2014-01-06T21:47:09.576Z", 
     "priority": 50, 
     "cost": [
       13
