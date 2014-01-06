@@ -10,6 +10,7 @@
 *.so
 *.log
 *.egg-info
+*.sqlite3
 .DS_Store
 .idea
 .coverage
