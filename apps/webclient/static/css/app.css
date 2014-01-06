@@ -7713,6 +7713,16 @@ th.hide-for-touch {
   display: table-cell !important;
 }
 
+/* line 2, ../scss/_sketchy.scss */
+ul.disc.sketchy {
+  list-style-image: url(../img/sketchy/ul.sketcy-disc.png);
+}
+
+/* line 6, ../scss/_sketchy.scss */
+ul.square.sketchy {
+  list-style-image: url(../img/sketchy/ul.sketcy-square.png);
+}
+
 /* line 2, ../scss/_base.scss */
 html, body {
   background: url(../img/backgrounds/linedpaper.png);
