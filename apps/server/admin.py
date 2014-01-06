@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from django.contrib import admin
+from django.db.models import Sum
 from .models import Card, DeckCardQuantity, Deck, Effect
 
 
@@ -15,13 +16,22 @@ class DeckCardQuantityAdmin(admin.ModelAdmin):
 
 
 class DeckAdmin(admin.ModelAdmin):
+    list_display = ("name", "description", "total_cards")
     filter_horizontal = ("cards",)
+
+    @staticmethod
+    def total_cards(obj):
+        return obj.cards.aggregate(total_cards=Sum("quantity"))["total_cards"]
 
 
 class EffectAdmin(admin.ModelAdmin):
-    list_display = ("name", "ability", "priority", "resolves")
+    list_display = ("name", "description", "has_cost", "ability", "priority", "resolves")
     list_filter = ("ability", "resolves")
     filter_horizontal = ("cost",)
+
+    @staticmethod
+    def has_cost(obj):
+        return obj.cost.exists()
 
 
 class EffectGroupAdmin(admin.ModelAdmin):

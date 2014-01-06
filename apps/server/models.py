@@ -8,6 +8,8 @@ from django.utils.translation import ugettext_lazy as _
 
 from tastypie.models import create_api_key
 
+from utilslib.string import pluralize_string
+
 
 PHASES = (
     ("block.start", _("Block - Start")),
@@ -90,7 +92,8 @@ class DeckCardQuantity(models.Model):
         verbose_name_plural = "Deck card quantities"
 
     def __unicode__(self):
-        return "{0} {1}".format(self.quantity, self.card.name)
+        # return "{0} {1}".format(self.quantity, self.card.name)
+        return pluralize_string(self.quantity, self.card.name)
 
 
 class Deck(models.Model):
@@ -104,6 +107,9 @@ class Deck(models.Model):
 
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
+
+    def __unicode__(self):
+        return self.name
 
 
 class Effect(models.Model):

@@ -4,6 +4,7 @@ django-tastypie
 django-guardian
 django-sitetree
 gunicorn
+psycopg2
 redis
 south
 sphinx
