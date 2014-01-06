@@ -92,7 +92,6 @@ class DeckCardQuantity(models.Model):
         verbose_name_plural = "Deck card quantities"
 
     def __unicode__(self):
-        # return "{0} {1}".format(self.quantity, self.card.name)
         return pluralize_string(self.quantity, self.card.name)
 
 
