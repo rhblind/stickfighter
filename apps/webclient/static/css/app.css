@@ -7723,6 +7723,24 @@ ul.square.sketchy {
   list-style-image: url(../img/sketchy/ul.sketcy-square.png);
 }
 
+/* line 10, ../scss/_sketchy.scss */
+ul.dash.sketchy {
+  list-style-image: url(../img/sketchy/ul.sketcy-dash.png);
+}
+
+/* line 14, ../scss/_sketchy.scss */
+div.sketchy {
+  background: transparent;
+  border: 10px solid transparent;
+  border-image: url(../img/sketchy/button.sketchty.png) 10 stretch;
+  color: #222222;
+  /*
+  -moz-border-image: url(../img/sketchy/button.sketchty-med.png) 30 30 stretch; // Old firefox
+  -webkit-border-image: url(../img/sketchy/button.sketchty-med.png) 30 30 stretch; // Safari
+  -o-border-image: url(../img/sketchy/button.sketchty-med.png) 30 30 stretch; // Opera
+  */
+}
+
 /* line 2, ../scss/_base.scss */
 html, body {
   background: url(../img/backgrounds/linedpaper.png);

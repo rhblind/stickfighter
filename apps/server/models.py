@@ -161,13 +161,19 @@ class Effect(models.Model):
 
     @property
     def name(self):
-        return "{ability} (priority: {priority})".format(
+        """
+        Create a generic name for the effect based on it's attributes.
+        """
+        name = "{ability} (priority: {priority})".format(
             ability="{ability} {min} - {max}".format(
                 ability=self.get_ability_display(), min=self.min_modifier, max=self.max_modifier)
             if not self.default_max else "{ability} {max}".format(
                 ability=self.get_ability_display(), max=self.max_modifier),
             priority=self.priority
         )
+        if self.cost.exists():
+            name = "{name} (costs: {cost})".format(name=name, cost=", ".join(obj.name for obj in self.cost.all()))
+        return name
 
 
 #

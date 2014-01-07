@@ -12,7 +12,8 @@ require.config({
         "backbone.iobind": "libs/backbone.iobind/dist/backbone.iobind",
         "backbone.tastypie": "libs/backbone.tastypie",
         "socket.io": "libs/socket.io/lib/socket.io",
-        "foundation": "libs/foundation/js/foundation.min"
+        "foundation": "libs/foundation/js/foundation.min",
+        "text": "libs/text/text"
     },
     shim: {
         "jquery.cookie": {

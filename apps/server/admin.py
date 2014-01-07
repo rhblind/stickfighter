@@ -3,6 +3,8 @@
 from django import forms
 from django.contrib import admin
 from django.db.models import Sum
+from django.utils.translation import ugettext_lazy as _
+
 from .models import Card, DeckCardQuantity, Deck, Effect
 
 
@@ -59,7 +61,10 @@ class EffectAdmin(admin.ModelAdmin):
 
     @staticmethod
     def has_cost(obj):
-        return obj.cost.exists()
+        """
+        Returns True if the effect has a cost, and False otherwise.
+        """
+        return _("Yes") if obj.cost.exists() else _("No")
 
 
 class EffectGroupAdmin(admin.ModelAdmin):

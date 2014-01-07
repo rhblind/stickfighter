@@ -5,6 +5,7 @@
     "dependencies": {
         "foundation": "zurb/bower-foundation",
         "requirejs": "latest",
+        "text": "latest",
         "socket.io": "latest",
         "underscore": "latest",
         "backbone": "latest",

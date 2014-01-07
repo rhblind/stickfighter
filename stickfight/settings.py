@@ -37,7 +37,7 @@ INSTALLED_APPS = (
     "django.contrib.sites",
     "django.contrib.staticfiles",
     # 3rd party apps
-    "allauth",
+    "allauth",              # http://www.sarahhagstrom.com/2013/09/the-missing-django-allauth-tutorial/
     "allauth.account",
     "allauth.socialaccount",
     "allauth.socialaccount.providers.google",
