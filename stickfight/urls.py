@@ -14,7 +14,7 @@ urlpatterns = patterns(
 
     # Include apps here
     url(r"^", include("apps.webclient.urls")),  # We add the webclient at the root url
-    url(r"^server", include("apps.server.urls"))
+    url(r"^server/", include("apps.server.urls"))
 )
 
 if getattr(settings, "DEBUG", False) is True:

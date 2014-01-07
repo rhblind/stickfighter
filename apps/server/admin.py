@@ -5,6 +5,8 @@ from django.contrib import admin
 from django.db.models import Sum
 from django.utils.translation import ugettext_lazy as _
 
+from guardian.admin import GuardedModelAdmin
+
 from .models import Card, DeckCardQuantity, Deck, Effect
 
 
@@ -33,7 +35,7 @@ class CardAdminModelForm(forms.ModelForm):
 # Model Admins
 #
 
-class CardAdmin(admin.ModelAdmin):
+class CardAdmin(GuardedModelAdmin):
     form = CardAdminModelForm
     list_display = ("name", "description", "type")
     list_filter = ("type",)
@@ -41,11 +43,11 @@ class CardAdmin(admin.ModelAdmin):
     ordering = ("name", "type")
 
 
-class DeckCardQuantityAdmin(admin.ModelAdmin):
+class DeckCardQuantityAdmin(GuardedModelAdmin):
     pass
 
 
-class DeckAdmin(admin.ModelAdmin):
+class DeckAdmin(GuardedModelAdmin):
     list_display = ("name", "description", "total_cards")
     filter_horizontal = ("cards",)
 
@@ -54,7 +56,7 @@ class DeckAdmin(admin.ModelAdmin):
         return obj.cards.aggregate(total_cards=Sum("quantity"))["total_cards"]
 
 
-class EffectAdmin(admin.ModelAdmin):
+class EffectAdmin(GuardedModelAdmin):
     list_display = ("name", "description", "has_cost", "ability", "priority", "resolves")
     list_filter = ("ability", "resolves")
     filter_horizontal = ("cost",)
@@ -67,7 +69,7 @@ class EffectAdmin(admin.ModelAdmin):
         return _("Yes") if obj.cost.exists() else _("No")
 
 
-class EffectGroupAdmin(admin.ModelAdmin):
+class EffectGroupAdmin(GuardedModelAdmin):
     pass
 
 

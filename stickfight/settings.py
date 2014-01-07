@@ -26,6 +26,9 @@ TEMPLATE_DEBUG = DEBUG
 ALLOWED_HOSTS = []
 SITE_ID = 1
 
+# We need to define a default user id for anonymous users
+ANONYMOUS_USER_ID = -1
+
 # Application definition
 
 INSTALLED_APPS = (
@@ -41,6 +44,7 @@ INSTALLED_APPS = (
     "allauth.account",
     "allauth.socialaccount",
     "allauth.socialaccount.providers.google",
+    "guardian",
     "sitetree",
     "south",
     "tastypie",

@@ -8,5 +8,8 @@ socketio.sdjango.autodiscover()
 urlpatterns = patterns(
     "",
     # Socket.IO urls
-    url("^socket\.io", include(socketio.sdjango.urls)),
+    url(r"^socket\.io", include(socketio.sdjango.urls)),
+
+    # APIs
+    url(r"^api/", include("apps.server.api.urls"))
 )
