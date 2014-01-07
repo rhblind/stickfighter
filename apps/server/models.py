@@ -8,7 +8,7 @@ from django.utils.translation import ugettext_lazy as _
 
 from tastypie.models import create_api_key
 
-from utilslib.string import pluralize_string
+from apps.utilslib.string import pluralize_string
 
 
 PHASES = (

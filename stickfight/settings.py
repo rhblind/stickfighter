@@ -48,6 +48,7 @@ INSTALLED_APPS = (
     # "allauth.socialaccount.providers.facebook",
     # local apps
     "apps.server",
+    "apps.utilslib",
     "apps.webclient"
 )
 
