@@ -29,7 +29,7 @@ define([
         });
 
         // Initialize the app router
-        Router.initialize();
+        Router.initialize({application: this});
 
         // Initialize foundation
         // Documentation can be found at: http://foundation.zurb.com/docs

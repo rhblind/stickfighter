@@ -1,52 +1,57 @@
 /**
- * Backbone URL route dispatcher
+ * Backbone URL route dispatcher.
+ * This is a pretty sane way of writing the router in
+ * my opinion.
+ * From
+ *  https://www.captechconsulting.com/blog/philip-kedy/modularizing-your-backbone-router-using-requirejs
  * */
 
 define([
     "jquery",
     "underscore",
     "backbone",
-    "backbone_app/views/sketchy/demo",
-    "backbone_app/views/cards/api-example"
-], function($, _, Backbone, SketchyDemoView, CardAPIExampleView) {
+    "vm"
+], function($, _, Backbone, Vm) {
+
     var AppRouter = Backbone.Router.extend({
-        routes: {
-            "posts/:id": "getPost",
+        initialize: function(options) {
+            this.application = options.application;
+        },
+        register: function(route, name, path) {
+            var self = this;
 
-            // sketchy demo
-            "sketchy": "displaySketchyDemoView",
+            this.route(route, name, function() {
+                var args = arguments;
+                require([path], function(module) {
+                    var options = null;
+                    var parameters = route.match(/[:\*]\w+/g);
 
-            // card api example
-            "card-api": "displayCardAPIView",
+                    // Map the router parameters to options for the view.
+                    if (parameters) {
+                        options = {};
+                        _.each(parameters, function(name, index) {
+                           options[name.substring(1)] = args[index];
+                        });
+                    }
 
-            "*actions": "defaultRoute"
+                    var page = Vm.create(self.application, name, module, options);
+                    page.render();
+
+                });
+            });
         }
     });
-    var initialize = function() {
-        var app_router = new AppRouter;
+    var initialize = function(options) {
+        var router = new AppRouter(options);
 
-        app_router.on("route:displaySketchyDemoView", function() {
-            var view = new SketchyDemoView();
-            view.render();
-        });
+        // Default route goes first
+        router.register("*actions", "DashboardPageView", "backbone_app/views/dashboard/page");
 
-        app_router.on("route:displayCardAPIView", function() {
-            var view = new CardAPIExampleView();
-            view.render();
-        });
+        router.register("sketchy", "SketchyDemoPageView", "backbone_app/views/sketchy/page");
+        router.register("card-api", "ApiCardExamplePageView", "backbone_app/views/cards/api-example");
 
-
-        app_router.on("route:getPost", function(id) {
-            console.log(id);
-        });
-
-        // Default fallback route
-        app_router.on("route:defaultRoute", function(actions) {
-            // No action!
-            console.log("Hit default route. No action here!");
-            console.log("Action defined as: " + actions);
-        });
-
+        // Start the Backbone history after all routes
+        // has been set up.
         Backbone.history.start();
     };
 

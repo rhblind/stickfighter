@@ -7750,6 +7750,16 @@ html, body {
 html div#wrapper, body div#wrapper {
   margin-top: 2.5rem;
 }
+/* line 19, ../scss/_base.scss */
+html div.spinner32, body div.spinner32 {
+  background: url(/static/img/spinner32.gif) no-repeat center top;
+  min-height: 4rem;
+}
+/* line 24, ../scss/_base.scss */
+html div.spinner64, body div.spinner64 {
+  background: url(/static/img/spinner64.gif) no-repeat center top;
+  min-height: 8rem;
+}
 
 /* add a debug css class which
  * displays a dotted border around the element.

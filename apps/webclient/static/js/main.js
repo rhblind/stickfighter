@@ -13,7 +13,9 @@ require.config({
         "backbone.tastypie": "libs/backbone.tastypie",
         "socket.io": "libs/socket.io/lib/socket.io",
         "foundation": "libs/foundation/js/foundation.min",
-        "text": "libs/text/text"
+        "text": "libs/text/text",
+        "vm": "libs/vm",
+        "events": "libs/events"
     },
     shim: {
         "jquery.cookie": {
@@ -41,7 +43,11 @@ require.config({
         },
         "foundation": {
             deps: ["jquery"]
+        },
+        "vm": {
+            deps: ["events"]
         }
+
     }
 });
 require([
@@ -51,7 +57,6 @@ require([
     "app",
     "foundation"
 ], function(application) {
-
     application.initialize();
 
 });
