@@ -17,9 +17,9 @@
 .sass-cache
 MANIFEST
 local_settings.py
-dist
-build
-static
-media
-docs/_build
-docs/_static
+dist/
+build/
+media/
+static/
+docs/_build/
+docs/_static/
