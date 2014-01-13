@@ -1,0 +1,14 @@
+{
+    "name": "foundation-libsass-template",
+    "dependencies": {
+        "foundation": "zurb/bower-foundation",
+        "requirejs": "latest",
+        "require-handlebars-plugin": "latest",
+        "text": "latest",
+        "socket.io": "latest",
+        "underscore": "latest",
+        "backbone": "latest",
+        "backbone.iobind": "latest",
+        "handlebars": "latest"
+    }
+}

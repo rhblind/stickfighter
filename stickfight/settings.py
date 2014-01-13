@@ -48,6 +48,7 @@ INSTALLED_APPS = (
     "allauth.account",
     "allauth.socialaccount",
     "allauth.socialaccount.providers.google",
+    "django_extensions",
     "guardian",
     "sitetree",
     "south",
@@ -128,11 +129,15 @@ TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, "apps", "webapp")
 )
 
+STATICFILES_DIRS = (
+    # os.path.join(BASE_DIR, "apps", "webapp", "static"),
+    os.path.join(BASE_DIR, "apps", "webapp", "components"),
+)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_ROOT = os.path.join(BASE_DIR, "apps", "webapp", "static")
 STATIC_URL = "/static/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"

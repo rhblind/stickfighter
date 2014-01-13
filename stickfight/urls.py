@@ -15,7 +15,7 @@ urlpatterns = patterns(
 
     # Include apps here
     # url(r"^", include("apps.webclient.urls")),  # We add the webclient at the root url
-    url(r"^", TemplateView.as_view(template_name="index.html")),
+    url(r"^$", view=TemplateView.as_view(template_name="index.html"), name="dashboard"),
     url(r"^server/", include("apps.server.urls"))
 )
 
