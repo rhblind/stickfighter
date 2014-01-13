@@ -58,7 +58,7 @@ INSTALLED_APPS = (
     # local apps
     "apps.server",
     "apps.utilslib",
-    "apps.webclient"
+    "apps.webapp"
 )
 
 MIDDLEWARE_CLASSES = (
@@ -125,19 +125,14 @@ USE_L10N = True
 USE_TZ = True
 
 
-TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR, "apps", "webapp")
-)
-
 STATICFILES_DIRS = (
-    # os.path.join(BASE_DIR, "apps", "webapp", "static"),
-    os.path.join(BASE_DIR, "apps", "webapp", "components"),
+    os.path.join(BASE_DIR, "apps", "webapp", "static", "webapp"),
 )
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, "apps", "webapp", "static")
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 STATIC_URL = "/static/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
