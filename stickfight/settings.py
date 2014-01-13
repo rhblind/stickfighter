@@ -126,7 +126,7 @@ USE_TZ = True
 
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "apps", "webapp", "static", "webapp"),
+    os.path.join(BASE_DIR, "apps", "webapp", "static"),
 )
 
 # Static files (CSS, JavaScript, Images)
