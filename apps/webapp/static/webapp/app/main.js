@@ -4,21 +4,21 @@
 
 require.config({
     paths: {
-        "jquery": "../components/foundation/js/vendor/jquery",
-        "jquery.cookie": "../components/foundation/js/vendor/jquery.cookie",
-        "underscore": "../components/underscore/underscore",
-        "backbone": "../components/backbone/backbone",
-        //"backbone.iosync": "../components/backbone.iobind/dist/backbone.iosync",
-        //"backbone.iobind": "../components/backbone.iobind/dist/backbone.iobind",
-        "backbone.tastypie": "../components/backbone.tastypie",
-        "marionette": "../components/backbone.marionette/lib/backbone.marionette",
-        "handlebars": "../components/handlebars/handlebars",
-        //"socket.io": "../components/socket.io/lib/socket.io",
-        "foundation": "../components/foundation/js/foundation.min",
-        "text": "../components/text/text",
-        "hbs": "../components/require-handlebars-plugin/hbs",
-        "vm": "../components/vm",
-        "events": "../components/events"
+        "jquery": "../bower_components/foundation/js/vendor/jquery",
+        "jquery.cookie": "../bower_components/foundation/js/vendor/jquery.cookie",
+        "underscore": "../bower_components/underscore/underscore",
+        "backbone": "../bower_components/backbone/backbone",
+        //"backbone.iosync": "../bower_components/backbone.iobind/dist/backbone.iosync",
+        //"backbone.iobind": "../bower_components/backbone.iobind/dist/backbone.iobind",
+        "backbone.tastypie": "../bower_components/backbone.tastypie",
+        "marionette": "../bower_components/backbone.marionette/lib/backbone.marionette",
+        "handlebars": "../bower_components/handlebars/handlebars",
+        //"socket.io": "../bower_components/socket.io/lib/socket.io",
+        "foundation": "../bower_components/foundation/js/foundation.min",
+        "text": "../bower_components/text/text",
+        "hbs": "../bower_components/require-handlebars-plugin/hbs",
+        "vm": "../libs/vm",
+        "events": "../libs/events"
     },
     shim: {
         "jquery.cookie": {

@@ -9,6 +9,8 @@
         "underscore": "latest",
         "backbone": "latest",
         "backbone.iobind": "latest",
-        "handlebars": "latest"
+        "backbone-tastypie": "latest",
+        "handlebars": "latest",
+        "marionette": "latest"
     }
 }

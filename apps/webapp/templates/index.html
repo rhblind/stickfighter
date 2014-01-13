@@ -9,7 +9,7 @@
         <title>Stickfight!</title>
 
         <link rel="stylesheet" href="{% static "webapp/css/app.css" %}"/>
-        <script src="{% static "webapp/components/modernizr/modernizr.js" %}"></script>
+        <script src="{% static "webapp/bower_components/modernizr/modernizr.js" %}"></script>
     </head>
     <body>
         <header id="site-header">
@@ -24,6 +24,6 @@
 
         </footer>
 
-    <script data-main="app/main.js" src="{% static "webapp/components/requirejs/require.js" %}"></script>
+    <script data-main="{% static "webapp/app/main.js" %}" src="{% static "webapp/bower_components/requirejs/require.js" %}"></script>
     </body>
 </html>
