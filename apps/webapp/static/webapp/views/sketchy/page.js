@@ -7,16 +7,15 @@ define([
     "jquery",
     "underscore",
     "backbone",
-    "text!templates/sketchy/page.html"
-], function($, _, Backbone, demopageTemplate) {
+    "templates/compiled"
+], function($, _, Backbone, Templates) {
 
     return Backbone.View.extend({
         el: $("#content"),
-        template: demopageTemplate,
+        template: Templates["sketchy/page"],
 
         render: function(){
-            var template = _.template(this.template, {});
-            this.$el.html(template);
+            this.$el.html(this.template());
         }
     });
 });
