@@ -2,18 +2,21 @@
 html, body {
   background: $body-bg;
   -webkit-font-smoothing: $font-smoothing;
-
-  header#site-header {
-
-//    .top-bar {
-//      a:not(.button) {
-//        line-height: 45px;
-//      }
-//    }
-  }
+  height: 100%;
 
   div#wrapper {
-    margin-top: rem-calc(40);
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;  /* fallback for old browsers */
+    margin: 0 auto -8em;
+  }
+
+  footer#site-footer, .push {
+    height: 8em; /* this must match the above */
+  }
+
+  footer#site-footer {
+    background: url(../images/backgrounds/farmer.png);
   }
 
   div.spinner32 {
