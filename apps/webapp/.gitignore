@@ -1,0 +1,5 @@
+*.DS_Store
+/staging/css/*
+/staging/bower_components/*
+/staging/node_modules/*
+/static/webapp/static/*
