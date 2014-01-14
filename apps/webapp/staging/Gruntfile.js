@@ -24,10 +24,38 @@ module.exports = function(grunt) {
             grunt: { files: ['Gruntfile.js'] },
             sass: {
                 files: 'scss/**/*.scss',
-                tasks: ['sass']
+                tasks: [
+                    'sass',
+                    'bowercopy:css'  // copy css files after compilation
+                ]
+            },
+            handlebars: {
+                files: '../static/webapp/templates/**/*.hbs',
+                tasks: ['handlebars:compile']
             }
         },
 
+        // Pre-compile handlebars templates for speed!
+        handlebars: {
+            compile: {
+                options: {
+                    namespace: "Templates",
+                    amd: true
+                    /* // TODO: make regex to replace the long path.
+                    processName: function(path) {
+                        return path.replace(/^templates\//, "").replace(/\.hbs$/, "");
+                    }
+                    */
+                },
+                files: {
+                    "../static/webapp/templates/compiled.js": [
+                        "../static/webapp/templates/**/*.hbs"
+                    ]
+                }
+            }
+        },
+
+        // Manage copying of static files to /static directory
         bowercopy: {
             options: {
                 "destPrefix": "../static/webapp/static/"
@@ -40,9 +68,9 @@ module.exports = function(grunt) {
                     "js/backbone/backbone.iobind.js": "backbone.iobind/dist/backbone.iobind.js",
                     "js/backbone/backbone.iosync.js": "backbone.iobind/dist/backbone.iosync.js",
                     "js/foundation.js": "foundation/js/foundation.js",
-                    "js/handlebars.js": "handlebars/handlebars.js",
-                    "js/hbs": "require-handlebars-plugin/hbs",
-                    "js/hbs.js": "require-handlebars-plugin/hbs.js",
+                    "js/handlebars": "handlebars",
+                    //"js/hbs": "require-handlebars-plugin/hbs",
+                    //"js/hbs.js": "require-handlebars-plugin/hbs.js",
                     "js/jquery/jquery.js": "jquery/jquery.js",
                     "js/jquery/jquery.cookie.js": "foundation/js/vendor/jquery.cookie.js",
                     "js/modernizr.js": "modernizr/modernizr.js",
@@ -70,9 +98,10 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-handlebars');
     grunt.loadNpmTasks('grunt-bowercopy');
 
-    grunt.registerTask('build', ['sass']);
+    grunt.registerTask('build', ['sass', 'handlebars']);
     grunt.registerTask('default', ['build', 'watch']);
 
 

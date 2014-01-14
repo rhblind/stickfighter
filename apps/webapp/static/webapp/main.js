@@ -10,7 +10,7 @@ require.config({
         //"backbone.iobind": "static/js/backbone/backbone.iobind",
         //"backbone.iosync": "static/js/backbone/backbone.iosync",
         "foundation": "static/js/foundation",
-        "handlebars": "static/js/handlebars",
+        "handlebars": "static/js/handlebars/handlebars",
         "hbs": "static/js/hbs",
         "jquery": "static/js/jquery/jquery",
         "jquery.cookie": "static/js/jquery/jquery.cookie",
@@ -65,8 +65,8 @@ require.config({
     "hbs": {
         helpers: true,            // default: true
         i18n: false,              // default: false
-        templateExtension: 'hbs', // default: 'hbs'
-        partialsUrl: ''           // default: ''
+        templateExtension: "hbs", // default: "hbs"
+        partialsUrl: ""           // default: ""
     }
 });
 require([

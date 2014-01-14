@@ -6,15 +6,15 @@ define([
     "jquery",
     "underscore",
     "backbone",
-    "handlebars",
-    "hbs!templates/dashboard/page"
-], function($, _, Backbone, Handlebars, demopageTemplate) {
+    "templates/compiled"
+], function($, _, Backbone, Templates) {
 
     return Backbone.View.extend({
         el: $("#content"),
-        template: demopageTemplate,
+        template: Templates["../static/webapp/templates/dashboard/page.hbs"],
 
         render: function() {
+            //var template = this.template["../static/webapp/templates/dashboard/page"];
             var template = this.template();
             this.$el.html(template);
         }
