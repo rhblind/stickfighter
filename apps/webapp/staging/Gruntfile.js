@@ -40,12 +40,10 @@ module.exports = function(grunt) {
             compile: {
                 options: {
                     namespace: "Templates",
-                    amd: true
-                    /* // TODO: make regex to replace the long path.
+                    amd: true,
                     processName: function(path) {
-                        return path.replace(/^templates\//, "").replace(/\.hbs$/, "");
+                        return path.replace(/^.*templates\//, "").replace(/\.hbs$/, "");
                     }
-                    */
                 },
                 files: {
                     "../static/webapp/templates/compiled.js": [

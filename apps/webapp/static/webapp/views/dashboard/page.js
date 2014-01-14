@@ -11,12 +11,10 @@ define([
 
     return Backbone.View.extend({
         el: $("#content"),
-        template: Templates["../static/webapp/templates/dashboard/page.hbs"],
+        template: Templates["dashboard/page"],
 
         render: function() {
-            //var template = this.template["../static/webapp/templates/dashboard/page"];
-            var template = this.template();
-            this.$el.html(template);
+            this.$el.html(this.template());
         }
     });
 });
