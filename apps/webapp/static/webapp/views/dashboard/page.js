@@ -15,7 +15,6 @@ define([
         template: demopageTemplate,
 
         render: function() {
-            console.log("rendering page!");
             var template = this.template();
             this.$el.html(template);
         }

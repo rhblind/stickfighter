@@ -4,21 +4,21 @@
 
 require.config({
     paths: {
-        "jquery": "../bower_components/foundation/js/vendor/jquery",
-        "jquery.cookie": "../bower_components/foundation/js/vendor/jquery.cookie",
-        "underscore": "../bower_components/underscore/underscore",
-        "backbone": "../bower_components/backbone/backbone",
-        //"backbone.iosync": "../bower_components/backbone.iobind/dist/backbone.iosync",
-        //"backbone.iobind": "../bower_components/backbone.iobind/dist/backbone.iobind",
-        "backbone.tastypie": "../bower_components/backbone.tastypie",
-        "marionette": "../bower_components/backbone.marionette/lib/backbone.marionette",
-        "handlebars": "../bower_components/handlebars/handlebars",
-        //"socket.io": "../bower_components/socket.io/lib/socket.io",
-        "foundation": "../bower_components/foundation/js/foundation.min",
-        "text": "../bower_components/text/text",
-        "hbs": "../bower_components/require-handlebars-plugin/hbs",
-        "vm": "../libs/vm",
-        "events": "../libs/events"
+        "backbone": "static/js/backbone/backbone",
+        "backbone.marionette": "static/js/backbone/backbone.marionette",
+        "backbone.tastypie": "static/js/backbone/backbone-tastypie",
+        //"backbone.iobind": "static/js/backbone/backbone.iobind",
+        //"backbone.iosync": "static/js/backbone/backbone.iosync",
+        "foundation": "static/js/foundation",
+        "handlebars": "static/js/handlebars",
+        "hbs": "static/js/hbs",
+        "jquery": "static/js/jquery/jquery",
+        "jquery.cookie": "static/js/jquery/jquery.cookie",
+        //"socket.io": "static/js/socket.io",
+        "text": "static/js/text",
+        "underscore": "static/js/underscore",
+        "events": "static/js/events",
+        "vm": "static/js/vm"
     },
     shim: {
         "jquery.cookie": {
@@ -46,7 +46,7 @@ require.config({
         "handlebars": {
             exports: "Handlebars"
         },
-        "marionette": {
+        "backbone.marionette": {
             deps: ["backbone"],
             exports: "Backbone.Marionette"
         },
