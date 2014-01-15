@@ -1,4 +1,4 @@
-{% load staticfiles %}
+{% load staticfiles sitetree %}
 
 <!doctype html>
 <html class="no-js" lang="en">
@@ -12,7 +12,9 @@
         <script src="{% static "webapp/static/js/modernizr.js" %}"></script>
     </head>
     <body>
-        <header id="site-header"></header>
+        <header id="site-header">
+            {% sitetree_menu from "webapp_top_bar_nav_menu" include "trunk, topmenu" template "sitetree/topbar_navmenu/navmenu.html" %}
+        </header>
 
         <div id="wrapper">
             <div id="content"></div>

@@ -9,13 +9,14 @@ html, body {
     height: auto !important;
     height: 100%;  /* fallback for old browsers */
     margin: 0 auto -8em;
+    padding-top: rem-calc(40);
   }
 
   footer#site-footer, .push {
     height: 8em; /* this must match the above */
   }
 
-  footer#site-footer {
+  header#site-header, footer#site-footer {
     background: url(../images/backgrounds/farmer.png);
   }
 
