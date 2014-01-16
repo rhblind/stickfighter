@@ -1,6 +1,5 @@
 /**
- * View for rendering the sketchy demo page,
- * which shows off our increadible UI suite =)
+ * View for rendering the card example page.
  * */
 
 define([
@@ -13,6 +12,7 @@ define([
 
     return Backbone.Marionette.ItemView.extend({
         className: "row",
-        template: Templates["sketchy/page"]
+        template: Templates["cards/page"]
     });
 });
+

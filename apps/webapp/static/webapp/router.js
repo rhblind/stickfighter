@@ -50,7 +50,7 @@ define([
         router.register("*actions", "DashboardPageView", "views/dashboard/page");
 
         router.register("sketchy", "SketchyDemoPageView", "views/sketchy/page");
-        router.register("card-api", "ApiCardExamplePageView", "views/cards/api-example");
+        router.register("card-api", "ApiCardExamplePageView", "views/cards/page");
 
         // Start the Backbone history after all routes
         // has been set up.

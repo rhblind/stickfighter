@@ -1,3 +1,5 @@
+$footer-height: 8em;
+
 
 html, body {
   background: $body-bg;
@@ -8,12 +10,12 @@ html, body {
     min-height: 100%;
     height: auto !important;
     height: 100%;  /* fallback for old browsers */
-    margin: 0 auto -8em;
+    margin: 0 auto (-$footer-height);
     padding-top: rem-calc(40);
   }
 
   footer#site-footer, .push {
-    height: 8em; /* this must match the above */
+    height: $footer-height; /* this must match the above */
   }
 
   header#site-header, footer#site-footer {

@@ -10,7 +10,7 @@ define([
     "templates/compiled"
 ], function($, _, Backbone, Marionette, Templates) {
 
-    return Backbone.Marionette.CompositeView.extend({
+    return Backbone.Marionette.ItemView.extend({
         className: "row",
         template: Templates["dashboard/page"]
     });
