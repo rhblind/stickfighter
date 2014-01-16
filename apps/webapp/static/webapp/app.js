@@ -6,10 +6,14 @@ define([
     "jquery",
     "underscore",
     "backbone",
+    "backbone.marionette",
     "router"
-], function($, _, Backbone, Router) {
+], function($, _, Backbone, Marionette, Router) {
 
+    /*
     var initialize = function() {
+
+
         // Patch Model and Collection to trigger a fetch event.
         // See http://tbranyen.com/post/how-to-indicate-backbone-fetch-progress
         _.each(["Model", "Collection"], function(name) {
@@ -28,6 +32,7 @@ define([
             };
         });
 
+
         // Initialize the app router
         Router.initialize({application: this});
 
@@ -39,4 +44,21 @@ define([
     return {
         initialize: initialize
     }
+    */
+
+    var App = new Backbone.Marionette.Application();
+    App.addRegions({
+        headerRegion: "#site-header",
+        contentRegion: "#content",
+        footerRegion: "#site-footer"
+    });
+    App.on("initialize:after", function() {
+        /**
+         * Initialize application router and foundation
+         * after Marionette is ready.
+         * */
+        Router.initialize({application: this});
+        $(document).foundation();
+    });
+    return App;
 });

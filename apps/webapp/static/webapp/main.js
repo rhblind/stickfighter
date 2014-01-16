@@ -61,12 +61,6 @@ require.config({
         "vm": {
             deps: ["events"]
         }
-    },
-    "hbs": {
-        helpers: true,            // default: true
-        i18n: false,              // default: false
-        templateExtension: "hbs", // default: "hbs"
-        partialsUrl: ""           // default: ""
     }
 });
 require([
@@ -76,6 +70,6 @@ require([
     "app",
     "foundation"
 ], function(application) {
-    application.initialize();
-
+    //application.initialize();
+    application.start();
 });

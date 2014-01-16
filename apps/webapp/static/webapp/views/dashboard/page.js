@@ -6,16 +6,13 @@ define([
     "jquery",
     "underscore",
     "backbone",
+    "backbone.marionette",
     "templates/compiled"
-], function($, _, Backbone, Templates) {
+], function($, _, Backbone, Marionette, Templates) {
 
-    return Backbone.View.extend({
-        el: $("#content"),
-        template: Templates["dashboard/page"],
-
-        render: function() {
-            this.$el.html(this.template());
-        }
+    return Backbone.Marionette.CompositeView.extend({
+        className: "row",
+        template: Templates["dashboard/page"]
     });
 });
 

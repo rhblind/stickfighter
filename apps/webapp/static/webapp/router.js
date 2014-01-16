@@ -10,10 +10,11 @@ define([
     "jquery",
     "underscore",
     "backbone",
+    "backbone.marionette",
     "vm"
-], function($, _, Backbone, Vm) {
+], function($, _, Backbone, Marionette, Vm) {
 
-    var AppRouter = Backbone.Router.extend({
+    var AppRouter = Backbone.Marionette.AppRouter.extend({
         initialize: function(options) {
             this.application = options.application;
         },
@@ -34,8 +35,9 @@ define([
                         });
                     }
 
-                    var page = Vm.create(self.application, name, module, options);
-                    page.render();
+                    var view = Vm.create(self.application, name, module, options);
+                    //view.render();
+                    self.application.contentRegion.show(view);
 
                 });
             });
