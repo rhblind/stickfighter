@@ -14,10 +14,35 @@ define([
     "vm"
 ], function($, _, Backbone, Marionette, Vm) {
 
+    var AppController = Backbone.Marionette.Controller.extend({
+        showView: function(name) {
+            console.log(name);
+        }
+    });
+
     var AppRouter = Backbone.Marionette.AppRouter.extend({
+
+        controller: new AppController,
+
+        appRoutes: {
+
+        },
+
         initialize: function(options) {
             this.application = options.application;
+            this.staticRoutes();
+
         },
+        staticRoutes: function() {
+            this.register("*actions", "DashboardPageView", "views/dashboard/page");
+
+            this.register("sketchy", "SketchyDemoPageView", "views/sketchy/page");
+            this.register("card-api", "ApiCardExamplePageView", "views/cards/page");
+
+            this.register("staff-stuff/card-database", "CardDatabasePageView", "views/staff-stuff/card-database");
+        },
+        // Use this to register static routes in a sensible way.
+        // TODO: We don't need the name, we're using precompiled templates!
         register: function(route, name, path) {
             var self = this;
 
@@ -36,7 +61,6 @@ define([
                     }
 
                     var view = Vm.create(self.application, name, module, options);
-                    //view.render();
                     self.application.contentRegion.show(view);
 
                 });
@@ -44,13 +68,7 @@ define([
         }
     });
     var initialize = function(options) {
-        var router = new AppRouter(options);
-
-        // Default route goes first
-        router.register("*actions", "DashboardPageView", "views/dashboard/page");
-
-        router.register("sketchy", "SketchyDemoPageView", "views/sketchy/page");
-        router.register("card-api", "ApiCardExamplePageView", "views/cards/page");
+        new AppRouter(options);
 
         // Start the Backbone history after all routes
         // has been set up.

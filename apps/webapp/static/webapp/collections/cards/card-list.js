@@ -9,7 +9,7 @@ define([
 
     return Backbone.Collection.extend({
 
-        Model: Backbone.Model.extend({}),
+        model: Backbone.Model.extend({}),
         url: "/server/api/v1/card"
 
     });

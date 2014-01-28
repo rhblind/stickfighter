@@ -15,4 +15,5 @@ define([
         className: "row",
         template: Templates["sketchy/page"]
     });
+
 });
