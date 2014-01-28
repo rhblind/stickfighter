@@ -68,7 +68,8 @@ require([
     // Also pass additional libraries which should be exposed here.
     // Note that libraries passed here will *not* be loaded async!
     "app",
-    "foundation"
+    "foundation",
+    "backbone.tastypie"
 ], function(application) {
     //application.initialize();
     application.start();

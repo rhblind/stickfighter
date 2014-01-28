@@ -1,5 +1,5 @@
-Stickfight
-==========
+Stickfighter
+============
 
 
 Stian's supre boksespill!
