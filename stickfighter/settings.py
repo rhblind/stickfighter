@@ -1,5 +1,5 @@
 """
-Django settings for stickfight project.
+Django settings for stickfighter project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.6/topics/settings/
@@ -90,9 +90,9 @@ AUTHENTICATION_BACKENDS = (
     "allauth.account.auth_backends.AuthenticationBackend"
 )
 
-ROOT_URLCONF = "stickfight.urls"
+ROOT_URLCONF = "stickfighter.urls"
 
-WSGI_APPLICATION = "stickfight.wsgi.application"
+WSGI_APPLICATION = "stickfighter.wsgi.application"
 
 LOGIN_REDIRECT_URL = "/#/"
 SOCIALACCOUNT_QUERY_EMAIL = True
@@ -103,7 +103,7 @@ SOCIALACCOUNT_QUERY_EMAIL = True
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "stickfight",
+        "NAME": "stickfighter",
         "USER": "rolf",
         # "PASSWORD": "mypassword",
         "HOST": "127.0.0.1",
