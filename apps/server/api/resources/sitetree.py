@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+from __future__ import unicode_literals
+
 from tastypie import fields
 from tastypie.serializers import Serializer
 from tastypie.authentication import MultiAuthentication, ApiKeyAuthentication

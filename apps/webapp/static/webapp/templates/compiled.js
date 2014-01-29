@@ -58,7 +58,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<section>\n    <h1>Test template!</h1>\n    <section id=\"menu\"></section>\n    <section id=\"preview\"></section>\n</section>\n";
+  return "<section>\n    <h1>Card database</h1>\n    <section id=\"menu\"></section>\n    <section id=\"preview\"></section>\n</section>\n";
   });
 
 return this["Templates"];

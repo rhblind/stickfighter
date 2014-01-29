@@ -11,23 +11,24 @@ define([
     "collections/cards/card-list"
 ], function($, _, Backbone, Marionette, Templates, CardListCollection) {
 
-    var itemView = Backbone.Marionette.ItemView.extend({
-        tagName: "li",
-        template: Templates["staff-stuff/card-database-itemview"]
-    });
-
     var compositeView = Backbone.Marionette.CompositeView.extend({
+        className: "large-4 columns",
         template: Templates["staff-stuff/card-database-compositeview"],
         collection: new CardListCollection(),
-        className: "large-4 columns",
-        itemView: itemView,
+        itemView: Backbone.Marionette.ItemView.extend({
+            tagName: "li",
+            template: Templates["staff-stuff/card-database-itemview"],
+
+            events: {
+                "click span": function(e) {
+                    console.log($(e.currentTarget));
+                }
+            }
+        }),
         itemViewContainer: "ul",
 
         initialize: function() {
             this.collection.fetch();
-        },
-        onRender: function() {
-            console.log(this.collection);
         }
     });
 
