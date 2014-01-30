@@ -1,7 +1,11 @@
+# -*- coding: utf-8 -*-
+
 from django.utils.datastructures import SortedDict
 
-from django_remote_forms import fields, logger
-from django_remote_forms.utils import resolve_promise
+from . import fields
+from .utils import resolve_promise
+
+from .. import logger
 
 
 class RemoteForm(object):

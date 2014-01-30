@@ -6,6 +6,7 @@ django-sitetree
 gunicorn
 psycopg2
 redis
+six
 south
 sphinx
 sphinx-rtd-theme==0.1.5

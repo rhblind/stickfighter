@@ -8,20 +8,28 @@ from tastypie.serializers import Serializer
 from tastypie.authentication import MultiAuthentication, ApiKeyAuthentication
 
 from allauth.account.forms import LoginForm
-from apps.utilslib.remote_forms.forms import RemoteForm
+from apps.utilslib.tastypie.resources import FormResource
 
-# http://www.slideshare.net/tarequeh/django-forms-in-a-web-api-world
-# Maybe stuff this in an account app so we have it in the correct namespace?
 
-class LoginFormResource(Resource):
+from django import forms
+from apps.server.models import Card
+
+class TestForm(forms.ModelForm):
+
+    class Meta:
+        model = Card
+        exclude = ["effects"]
+
+
+class LoginFormResource(FormResource):
     """
     A resource which serialize the login form to json data
     """
 
     class Meta:
-        resource_name = "/forms/login"
+        resource_name = "forms/login"
         serializers = Serializer(formats=["xml", "json"])
         default_format = "application/json"
         include_resource_uri = True
         allowed_methods = ["get", "post"]
-        form_cls = LoginForm
+        form = LoginForm()

@@ -1,9 +1,13 @@
+# -*- coding: utf-8 -*-
+
+
 import datetime
 
 from django.conf import settings
 from django.utils.datastructures import SortedDict
 
-from django_remote_forms import logger, widgets
+from . import widgets
+from .. import logger
 
 
 class RemoteField(object):

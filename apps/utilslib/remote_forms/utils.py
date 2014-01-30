@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from django.utils.functional import Promise
 from django.utils.encoding import force_unicode
 
