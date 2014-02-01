@@ -6,6 +6,15 @@ module.exports = function(grunt) {
 
         pkg: grunt.file.readJSON('package.json'),
 
+        hub: {
+            watch: {
+                src: [
+                    'libs/backbone.remoteforms/Gruntfile.js'
+                ],
+                tasks: ['build']
+            }
+        },
+
         sass: {
             options: {
                 includePaths: ['bower_components/foundation/scss']
@@ -30,7 +39,9 @@ module.exports = function(grunt) {
                 ]
             },
             handlebars: {
-                files: '../static/webapp/templates/**/*.hbs',
+                files: [
+                    '../static/webapp/templates/**/*.hbs'
+                ],
                 tasks: ['handlebars:compile']
             }
         },
@@ -39,15 +50,15 @@ module.exports = function(grunt) {
         handlebars: {
             compile: {
                 options: {
-                    namespace: "Templates",
+                    namespace: 'Templates',
                     amd: true,
                     processName: function(path) {
-                        return path.replace(/^.*templates\//, "").replace(/\.hbs$/, "");
+                        return path.replace(/^.*templates\//, '').replace(/\.hbs$/, '');
                     }
                 },
                 files: {
-                    "../static/webapp/templates/compiled.js": [
-                        "../static/webapp/templates/**/*.hbs"
+                    '../static/webapp/templates/compiled.js': [
+                        '../static/webapp/templates/**/*.hbs'
                     ]
                 }
             }
@@ -65,6 +76,10 @@ module.exports = function(grunt) {
                     "js/backbone/backbone-tastypie.js": "backbone-tastypie/backbone_tastypie/static/js/backbone-tastypie.js",
                     "js/backbone/backbone.iobind.js": "backbone.iobind/dist/backbone.iobind.js",
                     "js/backbone/backbone.iosync.js": "backbone.iobind/dist/backbone.iosync.js",
+                    "js/backbone/backbone.remoteforms/forms.js": "../libs/backbone.remoteforms/forms.js",
+                    "js/backbone/backbone.remoteforms/utils.js": "../libs/backbone.remoteforms/utils.js",
+                    "js/backbone/backbone.remoteforms/templates.js": "../libs/backbone.remoteforms/templates.js",
+                    "js/backbone/backbone.remoteforms/templates/compiled.js": "../libs/backbone.remoteforms/templates/compiled.js",
                     "js/foundation.js": "foundation/js/foundation.js",
                     "js/handlebars/handlebars.js": "handlebars/handlebars.js",
                     "js/handlebars/handlebars.runtime.js": "handlebars/handlebars.runtime.js",
@@ -93,12 +108,13 @@ module.exports = function(grunt) {
 
     });
 
+    grunt.loadNpmTasks('grunt-hub');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-handlebars');
     grunt.loadNpmTasks('grunt-bowercopy');
 
-    grunt.registerTask('build', ['sass', 'handlebars']);
+    grunt.registerTask('build', ['hub', 'sass', 'handlebars']);
     grunt.registerTask('default', ['build', 'watch']);
 
 
