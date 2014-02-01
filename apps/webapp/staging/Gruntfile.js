@@ -67,41 +67,41 @@ module.exports = function(grunt) {
         // Manage copying of static files to /static directory
         bowercopy: {
             options: {
-                "destPrefix": "../static/webapp/static/"
+                'destPrefix': '../static/webapp/static/'
             },
             libs: {
                 files: {
-                    "js/backbone/backbone.js": "backbone/backbone.js",
-                    "js/backbone/backbone.marionette.js": "marionette/lib/backbone.marionette.js",
-                    "js/backbone/backbone-tastypie.js": "backbone-tastypie/backbone_tastypie/static/js/backbone-tastypie.js",
-                    "js/backbone/backbone.iobind.js": "backbone.iobind/dist/backbone.iobind.js",
-                    "js/backbone/backbone.iosync.js": "backbone.iobind/dist/backbone.iosync.js",
-                    "js/backbone/backbone.remoteforms/forms.js": "../libs/backbone.remoteforms/forms.js",
-                    "js/backbone/backbone.remoteforms/utils.js": "../libs/backbone.remoteforms/utils.js",
-                    "js/backbone/backbone.remoteforms/templates.js": "../libs/backbone.remoteforms/templates.js",
-                    "js/backbone/backbone.remoteforms/templates/compiled.js": "../libs/backbone.remoteforms/templates/compiled.js",
-                    "js/foundation.js": "foundation/js/foundation.js",
-                    "js/handlebars/handlebars.js": "handlebars/handlebars.js",
-                    "js/handlebars/handlebars.runtime.js": "handlebars/handlebars.runtime.js",
-                    "js/jquery/jquery.js": "jquery/jquery.js",
-                    "js/jquery/jquery.cookie.js": "foundation/js/vendor/jquery.cookie.js",
-                    "js/modernizr.js": "modernizr/modernizr.js",
-                    "js/require.js": "requirejs/require.js",
-                    "js/socket.io.js": "socket.io/lib/socket.io.js",
-                    "js/text.js": "text/text.js",
-                    "js/underscore.js": "underscore/underscore.js",
-                    "js/events.js": "../libs/events.js",
-                    "js/vm.js": "../libs/vm.js"
+                    'js/backbone/backbone.js': 'backbone/backbone.js',
+                    'js/backbone/backbone.marionette.js': 'marionette/lib/backbone.marionette.js',
+                    'js/backbone/backbone-tastypie.js': 'backbone-tastypie/backbone_tastypie/static/js/backbone-tastypie.js',
+                    'js/backbone/backbone.iobind.js': 'backbone.iobind/dist/backbone.iobind.js',
+                    'js/backbone/backbone.iosync.js': 'backbone.iobind/dist/backbone.iosync.js',
+                    'js/backbone/backbone.remoteforms/forms.js': '../libs/backbone.remoteforms/forms.js',
+                    'js/backbone/backbone.remoteforms/utils.js': '../libs/backbone.remoteforms/utils.js',
+                    'js/backbone/backbone.remoteforms/templates.js': '../libs/backbone.remoteforms/templates.js',
+                    'js/backbone/backbone.remoteforms/templates/compiled.js': '../libs/backbone.remoteforms/templates/compiled.js',
+                    'js/foundation.js': 'foundation/js/foundation.js',
+                    'js/handlebars/handlebars.js': 'handlebars/handlebars.js',
+                    'js/handlebars/handlebars.runtime.js': 'handlebars/handlebars.runtime.js',
+                    'js/jquery/jquery.js': 'jquery/jquery.js',
+                    'js/jquery/jquery.cookie.js': 'foundation/js/vendor/jquery.cookie.js',
+                    'js/modernizr.js': 'modernizr/modernizr.js',
+                    'js/require.js': 'requirejs/require.js',
+                    'js/socket.io.js': 'socket.io/lib/socket.io.js',
+                    'js/text.js': 'text/text.js',
+                    'js/underscore.js': 'underscore/underscore.js',
+                    'js/events.js': '../libs/events.js',
+                    'js/vm.js': '../libs/vm.js'
                 }
             },
             css: {
                 files: {
-                    "css/app.css": "../css/app.css"
+                    'css/app.css': '../css/app.css'
                 }
             },
             images: {
                 files: {
-                    "images": "../images"
+                    'images': '../images'
                 }
             }
         }
