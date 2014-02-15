@@ -11,16 +11,6 @@ from allauth.account.forms import LoginForm
 from apps.utilslib.tastypie.resources import FormResource
 
 
-from django import forms
-from apps.server.models import Card
-
-class TestForm(forms.ModelForm):
-
-    class Meta:
-        model = Card
-        exclude = ["effects"]
-
-
 class LoginFormResource(FormResource):
     """
     A resource which serialize the login form to json data

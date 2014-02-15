@@ -7,6 +7,7 @@ require.config({
         "backbone": "static/js/backbone/backbone",
         "backbone.marionette": "static/js/backbone/backbone.marionette",
         "backbone.tastypie": "static/js/backbone/backbone-tastypie",
+        "backbone.remoteforms": "static/js/backbone/backbone.remoteforms/forms",
         //"backbone.iobind": "static/js/backbone/backbone.iobind",
         //"backbone.iosync": "static/js/backbone/backbone.iosync",
         "foundation": "static/js/foundation",
@@ -34,6 +35,9 @@ require.config({
         "backbone.tastypie": {
             deps: ["backbone"],
             exports: "Backbone.Tastypie"
+        },
+        "backbone.remoteforms": {
+            exports: "Backbone.RemoteForms"
         },
         /*
         "backbone.iosync": {

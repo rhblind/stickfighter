@@ -2,6 +2,15 @@ define(['handlebars'], function(Handlebars) {
 
 this["Templates"] = this["Templates"] || {};
 
+this["Templates"]["account/login"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
+  this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
+  
+
+
+  return "<div class=\"large-12 columns\">\n    <h3>Login</h3>\n    <p>\n        hurra\n    </p>\n</div>\n";
+  });
+
 this["Templates"]["cards/page"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};

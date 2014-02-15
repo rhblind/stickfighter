@@ -1,13 +1,11 @@
-define([
-    'jquery',
-    'underscore',
-    'backbone',
-    'templates',
-    'utils'
-], function($, _, Backbone, Templates, Utils) {
+define(function (require) {
     'use strict';
-
-    var Forms = {};
+    var $ = require('jquery'),
+        _ = require('underscore'),
+        Backbone = require('backbone'),
+        Templates = require('./templates'),
+        Utils = require('./utils'),
+        Forms = {};
 
     Forms.Model = Backbone.Model.extend({
         initialize: function (options) {

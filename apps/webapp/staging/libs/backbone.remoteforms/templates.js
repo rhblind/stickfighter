@@ -1,6 +1,6 @@
 //define(function (require){
 define([
-    'templates/forms'
+    'templates/compiled'
 ], function(Templates) {
     'use strict';
 

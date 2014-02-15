@@ -15,6 +15,9 @@ define([
 ], function($, _, Backbone, Marionette, Vm) {
 
     var AppController = Backbone.Marionette.Controller.extend({
+        // We're currently not using the controller functionality
+        // because of the homebrewed solution below, which in my
+        // head is a bit cleaner.
         showView: function(name) {
             console.log(name);
         }
@@ -35,7 +38,7 @@ define([
         },
         staticRoutes: function() {
             this.register("*actions", "DashboardPageView", "views/dashboard/page");
-
+            this.register("account/login", "AccountLoginPageView", "views/account/login");
             this.register("sketchy", "SketchyDemoPageView", "views/sketchy/page");
             this.register("card-api", "ApiCardExamplePageView", "views/cards/page");
 
